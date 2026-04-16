@@ -1,1 +1,1 @@
-This is the quantportfolioadvisors.com site
+This is the quantportfolioadvisors.com site.
