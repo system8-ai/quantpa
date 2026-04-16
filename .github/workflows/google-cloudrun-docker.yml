@@ -33,7 +33,7 @@ jobs:
           esac
           echo "ENVIRONMENT=$ENVIRONMENT"                             >> $GITHUB_ENV
           echo "PROJECT_ID=elysium-$ENVIRONMENT"                     >> $GITHUB_ENV
-          echo "SERVICE=${ENVIRONMENT}-quantpacom                          >> $GITHUB_ENV
+          echo "SERVICE=${ENVIRONMENT}-quant_portfolio_advisors_com"                          >> $GITHUB_ENV
           echo "REPO=us-docker.pkg.dev/elysium-$ENVIRONMENT/system8" >> $GITHUB_ENV
 
       - name: 'Aut/henticate to Google Cloud'
