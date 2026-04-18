@@ -9,7 +9,21 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>Q</text></svg>">
+  <!-- Favicon: modern browsers (auto light/dark) -->
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+  <!-- Favicon: PNG fallback for older browsers -->
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png" />
+
+  <!-- iOS home screen -->
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+
+  <!-- Android / PWA -->
+  <link rel="manifest" href="/site.webmanifest" />
+
+  <!-- Theme color for Android chrome + iOS Safari status bar -->
+  <meta name="theme-color" content="#1E120A" />
 </head>
 <body>
 
@@ -31,17 +45,20 @@
   </header>
 
   <!-- HERO -->
-  <section class="hero">
-    <div class="container">
-      <div class="hero-content">
-        <p class="hero-eyebrow">For Independent Wealth Advisors</p>
-        <h1>Your Outsourced Investment Committee</h1>
-        <p>Independent advisors shouldn't have to be portfolio manager, trader, and reporting analyst on top of everything else.</p>
-        <p>QPA runs the investment side of your practice -- systematic strategy, disciplined execution, client-ready reporting -- so you can focus on the relationships that built your business.</p>
-        <div class="hero-btns">
-          <a href="contact.html" class="btn btn-primary">Start a Conversation</a>
-          <a href="what-we-do.html" class="btn btn-outline">See How It Works</a>
-        </div>
+  <section class="qpa-hero">
+    <div class="qpa-hero__image">
+      <img src="images/hero-bg.jpg" alt="">
+      <div class="qpa-hero__overlay"></div>
+      <div class="qpa-hero__vignette"></div>
+    </div>
+    <div class="qpa-hero__inner">
+      <div class="qpa-hero__eyebrow">FOR INDEPENDENT WEALTH ADVISORS</div>
+      <h1 class="qpa-hero__heading">Your Outsourced<br>Investment Committee</h1>
+      <p class="qpa-hero__lede">Independent advisors shouldn't have to be portfolio manager, trader, and reporting analyst on top of everything else.</p>
+      <p class="qpa-hero__lede">QPA runs the investment side of your practice -- systematic strategy, disciplined execution, client-ready reporting -- so you can focus on the relationships that built your business.</p>
+      <div class="qpa-hero__actions">
+        <a href="contact.html" class="qpa-hero__button qpa-hero__button--primary">Start a Conversation</a>
+        <a href="what-we-do.html" class="qpa-hero__button qpa-hero__button--secondary">See How It Works</a>
       </div>
     </div>
   </section>
@@ -76,102 +93,89 @@
   </section>
 
   <!-- THE GUIDE -->
-  <section class="section">
-    <div class="container">
-      <div class="split fade-in" style="gap:64px;">
-        <div style="display:flex;flex-direction:column;align-items:center;gap:20px;">
-          <div style="display:flex;gap:16px;">
-            <div style="text-align:center;">
-              <div style="width:120px;height:120px;border-radius:50%;overflow:hidden;margin:0 auto 8px;box-shadow:0 4px 16px rgba(0,0,0,0.1);"><img src="images/ryan-carrington.jpg" alt="Ryan Carrington, CFA" style="width:100%;height:100%;object-fit:cover;object-position:center 15%;"></div>
-              <p style="font-size:0.8rem;font-weight:600;color:var(--text);">Ryan Carrington</p>
-              <p style="font-size:0.7rem;color:var(--text-light);">CIO</p>
-            </div>
-            <div style="text-align:center;">
-              <div style="width:120px;height:120px;border-radius:50%;overflow:hidden;margin:0 auto 8px;box-shadow:0 4px 16px rgba(0,0,0,0.1);"><img src="images/steve-cannon.jpg" alt="Steve Cannon" style="width:100%;height:100%;object-fit:cover;object-position:center 40%;"></div>
-              <p style="font-size:0.8rem;font-weight:600;color:var(--text);">Steve Cannon</p>
-              <p style="font-size:0.7rem;color:var(--text-light);">CQA</p>
-            </div>
-            <div style="text-align:center;">
-              <div style="width:120px;height:120px;border-radius:50%;overflow:hidden;margin:0 auto 8px;box-shadow:0 4px 16px rgba(0,0,0,0.1);"><img src="images/john-carrington.jpg" alt="John Carrington" style="width:100%;height:100%;object-fit:cover;object-position:center 15%;"></div>
-              <p style="font-size:0.8rem;font-weight:600;color:var(--text);">John Carrington</p>
-              <p style="font-size:0.7rem;color:var(--text-light);">CWO</p>
-            </div>
-          </div>
-          <a href="team.html" class="btn btn-secondary">Meet the Committee</a>
+  <section class="qpa-guide">
+    <div class="qpa-guide__inner">
+      <div class="qpa-guide__eyebrow">THE GUIDE</div>
+      <h2 class="qpa-guide__heading">Institutional discipline.<br>Independent advisor scale.</h2>
+
+      <div class="qpa-guide__grid">
+        <div class="qpa-guide__prose">
+          <p class="qpa-guide__paragraph">QPA functions the way a well-resourced firm's investment committee functions -- a dedicated team handling strategy, research, execution, and reporting as an integrated discipline.</p>
+          <p class="qpa-guide__paragraph">The difference is that this committee works <em>behind your practice</em>, not inside someone else's.</p>
+          <p class="qpa-guide__paragraph">Our team has spent careers at firms that built modern institutional investing. We've brought that methodology -- systematic, rules-based, quantitatively informed -- to a structure designed for independent wealth advisors.</p>
+          <a href="team.html" class="qpa-guide__link">Meet the committee <span aria-hidden="true">&rarr;</span></a>
         </div>
-        <div class="split-content">
-          <h2>Institutional Discipline. Independent Advisor Scale.</h2>
-          <p>QPA functions the way a well-resourced firm's investment committee functions -- a dedicated team handling strategy, research, execution, and reporting as an integrated discipline. The difference is that this committee works behind your practice, not inside someone else's.</p>
-          <p>Our team has spent careers at firms that built modern institutional investing: AQR, Two Sigma, Interactive Brokers, GE Asset Management, Deutsche Bank, Barclays. We've brought that methodology -- systematic, rules-based, quantitatively informed -- to a structure designed for independent wealth advisors.</p>
+        <aside class="qpa-guide__sidebar">
+          <div class="qpa-guide__sidebar-label">INSTITUTIONAL BACKGROUND</div>
+          <ul class="qpa-guide__firm-list">
+            <li>AQR</li>
+            <li>Two Sigma</li>
+            <li>Interactive Brokers</li>
+            <li>GE Asset Management</li>
+            <li>Deutsche Bank</li>
+            <li>Barclays</li>
+          </ul>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <!-- THE PLAN -->
+  <section class="qpa-plan">
+    <div class="qpa-plan__inner">
+      <div class="qpa-plan__eyebrow">THE PLAN</div>
+      <h2 class="qpa-plan__heading">What we bring to your practice.</h2>
+      <p class="qpa-plan__lede">Three disciplines -- strategy, execution, reporting -- delivered as one integrated investment function. Built for independent advisors, branded as yours.</p>
+      <div class="qpa-plan__grid">
+        <div class="qpa-plan__card">
+          <div class="qpa-plan__card-number">01</div>
+          <h3 class="qpa-plan__card-title">Strategy</h3>
+          <p class="qpa-plan__card-body">Three strategies built on a systematic foundation -- <strong>QPA Structured</strong>, <strong>QPA Momentum</strong>, and <strong>QPA Custom</strong>. Cross-asset allocation, volatility-aware positioning, disciplined risk budgeting. Choose one off the shelf or have one built to your specifications.</p>
+          <a href="strategies.html" class="qpa-plan__card-link">Explore the strategies <span aria-hidden="true">&rarr;</span></a>
+        </div>
+        <div class="qpa-plan__card">
+          <div class="qpa-plan__card-number">02</div>
+          <h3 class="qpa-plan__card-title">Execution</h3>
+          <p class="qpa-plan__card-body">We trade the accounts. Rebalancing, drift management, tax-aware implementation -- handled systematically, documented end to end, removed from your desk.</p>
+          <a href="what-we-do.html#execution" class="qpa-plan__card-link">How execution works <span aria-hidden="true">&rarr;</span></a>
+        </div>
+        <div class="qpa-plan__card">
+          <div class="qpa-plan__card-number">03</div>
+          <h3 class="qpa-plan__card-title">Reporting &amp; Diagnostics</h3>
+          <p class="qpa-plan__card-body">Quarterly client reports delivered under your brand. Portfolio diagnostic reports you can use to start conversations with prospects. The deliverables your practice needs, without the work of producing them.</p>
+          <a href="what-we-do.html#reporting" class="qpa-plan__card-link">See what we deliver <span aria-hidden="true">&rarr;</span></a>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- THE PLAN — THREE PILLARS -->
-  <section class="section" style="background:#F5F0E8;">
-    <div class="container">
-      <div class="section-header fade-in">
-        <h2>What We Bring to Your Practice</h2>
+  <!-- THE APPROACH -->
+  <section class="qpa-approach">
+    <div class="qpa-approach__inner">
+      <div class="qpa-approach__eyebrow">THE APPROACH</div>
+      <h2 class="qpa-approach__heading">The discipline behind the decisions.</h2>
+      <div class="qpa-approach__prose">
+        <p class="qpa-approach__paragraph">The "quant" in Quant Portfolio Advisors isn't marketing. Our process is built around systematic models, factor-informed allocation, and continuous data analysis -- methodology refined at leading institutional asset managers.</p>
+        <p class="qpa-approach__pullquote">The value isn't forecasting. It's discipline.</p>
+        <p class="qpa-approach__paragraph">Systematic processes remove emotional drag, document every decision, and produce results that are explainable, repeatable, and reviewable. In markets shaped by concentration, faster cycles, and shifting correlation regimes, that discipline matters more than ever.</p>
       </div>
-      <div class="card-grid">
-        <div class="card fade-in" style="background:#5C4538;color:#FFFFFF;">
-          <div class="card-icon" style="background:rgba(255,255,255,0.12);color:#8DBDD0;">
-            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
-          </div>
-          <h3 style="color:#FFFFFF;">Strategy</h3>
-          <p style="color:#FFFFFF;">Three strategies built on a systematic foundation -- QPA Structured, QPA Momentum, and QPA Custom -- with cross-asset allocation, volatility-aware positioning, and disciplined risk budgeting. Choose one off the shelf or have one built to your specifications.</p>
-          <a href="strategies.html" class="card-link" style="color:#FFFFFF;text-decoration:underline;">Explore the Strategies</a>
+      <div class="qpa-approach__pillars">
+        <div class="qpa-approach__pillar">
+          <div class="qpa-approach__pillar-title">Explainable</div>
+          <div class="qpa-approach__pillar-body">Every decision has a documented rationale you can share with clients and regulators.</div>
         </div>
-        <div class="card fade-in" style="background:#5C4538;color:#FFFFFF;">
-          <div class="card-icon" style="background:rgba(255,255,255,0.12);color:#8DBDD0;">
-            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
-          </div>
-          <h3 style="color:#FFFFFF;">Execution</h3>
-          <p style="color:#FFFFFF;">We trade the accounts. Rebalancing, drift management, tax-aware implementation -- handled systematically, documented end to end, removed from your desk.</p>
-          <a href="what-we-do.html#execution" class="card-link" style="color:#FFFFFF;text-decoration:underline;">How Execution Works</a>
+        <div class="qpa-approach__pillar">
+          <div class="qpa-approach__pillar-title">Repeatable</div>
+          <div class="qpa-approach__pillar-body">The same conditions produce the same response. No drift, no mood, no guesswork.</div>
         </div>
-        <div class="card fade-in" style="background:#5C4538;color:#FFFFFF;">
-          <div class="card-icon" style="background:rgba(255,255,255,0.12);color:#8DBDD0;">
-            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
-          </div>
-          <h3 style="color:#FFFFFF;">Reporting & Diagnostics</h3>
-          <p style="color:#FFFFFF;">Quarterly client reports delivered under your brand. Portfolio diagnostic reports you can use to start conversations with prospects. The deliverables your practice needs, without the work of producing them.</p>
-          <a href="what-we-do.html#reporting" class="card-link" style="color:#FFFFFF;text-decoration:underline;">See What We Deliver</a>
+        <div class="qpa-approach__pillar">
+          <div class="qpa-approach__pillar-title">Reviewable</div>
+          <div class="qpa-approach__pillar-body">Models, signals, and outcomes are monitored, stress-tested, and open to scrutiny.</div>
         </div>
       </div>
-    </div>
-  </section>
-
-  <!-- WHY QUANT -->
-  <section class="section">
-    <div class="container">
-      <div class="split fade-in">
-        <div class="split-content">
-          <h2>The Discipline Behind the Decisions</h2>
-          <p>The "quant" in Quant Portfolio Advisors isn't marketing. Our process is built around systematic models, factor-informed allocation, and continuous data analysis -- the methodology refined at leading institutional asset managers.</p>
-          <p>The value isn't forecasting. It's discipline. Systematic processes remove emotional drag, document every decision, and produce results that are explainable, repeatable, and reviewable.</p>
-          <p>Quant isn't a black box here. It's a methodology you can understand, explain to your clients, and stand behind.</p>
-          <a href="our-approach.html" class="btn btn-secondary" style="margin-top:8px;">Read Our Approach</a>
-        </div>
-        <div style="display:grid;grid-template-columns:1fr 1fr;gap:20px;">
-          <div style="background:var(--white);padding:28px;border-radius:12px;border:1px solid var(--border);">
-            <p style="font-size:2rem;font-weight:700;color:var(--secondary);font-family:'Playfair Display',serif;margin-bottom:8px;">Systematic</p>
-            <p style="font-size:0.85rem;color:var(--text-light);line-height:1.6;margin:0;">Rules-based decisions that remove emotional drag</p>
-          </div>
-          <div style="background:var(--white);padding:28px;border-radius:12px;border:1px solid var(--border);">
-            <p style="font-size:2rem;font-weight:700;color:var(--secondary);font-family:'Playfair Display',serif;margin-bottom:8px;">Documented</p>
-            <p style="font-size:0.85rem;color:var(--text-light);line-height:1.6;margin:0;">Every decision traceable and reviewable</p>
-          </div>
-          <div style="background:var(--white);padding:28px;border-radius:12px;border:1px solid var(--border);">
-            <p style="font-size:2rem;font-weight:700;color:var(--secondary);font-family:'Playfair Display',serif;margin-bottom:8px;">Explainable</p>
-            <p style="font-size:0.85rem;color:var(--text-light);line-height:1.6;margin:0;">A process you can articulate to any client</p>
-          </div>
-          <div style="background:var(--white);padding:28px;border-radius:12px;border:1px solid var(--border);">
-            <p style="font-size:2rem;font-weight:700;color:var(--secondary);font-family:'Playfair Display',serif;margin-bottom:8px;">Repeatable</p>
-            <p style="font-size:0.85rem;color:var(--text-light);line-height:1.6;margin:0;">Consistent across markets and market cycles</p>
-          </div>
-        </div>
+      <div class="qpa-approach__closing">
+        <p class="qpa-approach__paragraph">Quant isn't a black box here. It's a methodology you can understand, explain to your clients, and stand behind.</p>
+        <a href="our-approach.html" class="qpa-approach__link">Read our approach <span aria-hidden="true">&rarr;</span></a>
       </div>
     </div>
   </section>
