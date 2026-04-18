@@ -10,17 +10,17 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
   <!-- Favicon: modern browsers (auto light/dark) -->
-  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
 
   <!-- Favicon: PNG fallback for older browsers -->
-  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png" />
-  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16.png" />
 
   <!-- iOS home screen -->
-  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
 
   <!-- Android / PWA -->
-  <link rel="manifest" href="/site.webmanifest" />
+  <link rel="manifest" href="site.webmanifest" />
 
   <!-- Theme color for Android chrome + iOS Safari status bar -->
   <meta name="theme-color" content="#1E120A" />
@@ -38,156 +38,215 @@
         <a href="what-we-do.html">What We Do</a>
         <a href="strategies.html">Strategies</a>
         <a href="our-approach.html">Our Approach</a>
-        <a href="team.html" class="active">Team</a>
+        <a href="team.html" aria-current="page">Team</a>
         <a href="contact.html">Contact</a>
       </nav>
     </div>
   </header>
 
   <!-- PAGE HERO -->
-  <section class="page-hero">
-    <div class="container">
-      <h1>Meet the Committee Behind Your Practice</h1>
-      <p style="max-width:700px;margin:0 auto;">When you hand off investment management, you're trusting three things: the strategy, the execution, and the people. Most outsourced providers show you the first two and hope you don't ask about the third.</p>
-      <p style="max-width:700px;margin:16px auto 0;opacity:0.85;">Here are the people who'll be making decisions about your clients' portfolios -- their backgrounds, their disciplines, and how they work together as a committee.</p>
+  <section class="qpa-team-hero">
+    <div class="qpa-team-hero__image" aria-hidden="true">
+      <img src="images/hero-bg.jpg" alt="">
+      <div class="qpa-team-hero__overlay"></div>
+      <div class="qpa-team-hero__vignette"></div>
+    </div>
+    <div class="qpa-team-hero__inner">
+      <div class="qpa-team-hero__eyebrow">THE COMMITTEE</div>
+      <h1 class="qpa-team-hero__heading">Meet the committee<br>behind your practice.</h1>
+      <p class="qpa-team-hero__lede">When you hand off investment management, you're trusting three things: the strategy, the execution, and the people. Here are the people.</p>
     </div>
   </section>
 
-  <!-- THE COMMITTEE -->
-  <section id="committee" class="section">
-    <div class="container">
-      <div class="section-header fade-in">
-        <h2>The Committee</h2>
+  <!-- Ryan — photo left -->
+  <section class="qpa-team-bio qpa-team-bio--tone-a">
+    <div class="qpa-team-bio__inner qpa-team-bio__inner--photo-left">
+      <div class="qpa-team-bio__photo">
+        <img src="images/ryan-carrington.jpg" alt="Ryan Carrington">
       </div>
-
-      <!-- Ryan Carrington -->
-      <div class="fade-in" style="display:grid;grid-template-columns:280px 1fr;gap:48px;align-items:start;margin-bottom:80px;">
-        <div>
-          <div class="team-card-img" style="width:280px;height:280px;border-radius:16px;">
-            <img src="images/ryan-carrington.jpg" alt="Ryan Carrington, CFA" loading="lazy" style="object-position:center 15%;">
+      <div class="qpa-team-bio__content">
+        <div class="qpa-team-bio__discipline">PORTFOLIO ARCHITECTURE</div>
+        <h2 class="qpa-team-bio__name">Ryan Carrington, <em>CFA</em></h2>
+        <div class="qpa-team-bio__title">Chief Investment Officer</div>
+        <div class="qpa-team-bio__prose">
+          <p>Ryan leads portfolio architecture at QPA -- setting the strategic allocation framework, defining risk budgets, and ensuring every portfolio decision has structure behind it rather than intuition.</p>
+          <p>His 25 years in institutional investment management span SKY Harbor Capital Management, GE Asset Management, Deutsche Bank, and Barclays Capital. Across those roles, he's managed assets for institutional clients, private wealth platforms, and family offices -- developing the discipline to build strategies designed to hold up across market cycles, not just favorable ones.</p>
+          <p>Ryan's approach is grounded in two principles: a client's trust has to be earned, and every solution should be designed around the client's best interests. Those principles were shaped early -- watching his father conduct business with integrity, and running his own company through college. They carry into how he structures portfolios today.</p>
+          <p>He holds a B.A. in Economics from Brigham Young University and is a CFA charterholder. Away from the desk, Ryan spends time with his family and plays tennis on courts around the world.</p>
+        </div>
+        <div class="qpa-team-bio__firms qpa-team-bio__firms--grid">
+          <div class="qpa-team-bio__firms-label">INSTITUTIONAL BACKGROUND</div>
+          <div class="qpa-team-bio__firms-list">
+            <div>SKY Harbor Capital</div>
+            <div>GE Asset Management</div>
+            <div>Deutsche Bank</div>
+            <div>Barclays Capital</div>
           </div>
         </div>
-        <div>
-          <h3 style="font-size:1.5rem;margin-bottom:4px;">Ryan Carrington, CFA</h3>
-          <p class="role" style="margin-bottom:20px;">Chief Investment Officer</p>
-          <p style="color:var(--text-light);line-height:1.8;margin-bottom:16px;">Ryan leads portfolio architecture at QPA -- setting the strategic allocation framework, defining risk budgets, and ensuring every portfolio decision has structure behind it rather than intuition.</p>
-          <p style="color:var(--text-light);line-height:1.8;margin-bottom:16px;">His 25 years in institutional investment management span SKY Harbor Capital Management, GE Asset Management, Deutsche Bank, and Barclays Capital. Across those roles, he's managed assets for institutional clients, private wealth platforms, and family offices -- developing the discipline to build strategies designed to hold up across market cycles, not just favorable ones.</p>
-          <p style="color:var(--text-light);line-height:1.8;margin-bottom:16px;">Ryan's approach is grounded in two principles: a client's trust has to be earned, and every solution should be designed around the client's best interests. Those principles were shaped early -- watching his father conduct business with integrity, and running his own company through college. They carry into how he structures portfolios today.</p>
-          <p style="font-size:0.85rem;color:var(--text-light);font-style:italic;">B.A. Economics, Brigham Young University &bull; CFA Charterholder</p>
-          <p style="font-size:0.85rem;color:var(--text-light);margin-top:8px;">Away from the desk, Ryan spends time with his family and plays tennis on courts around the world.</p>
-        </div>
       </div>
+    </div>
+  </section>
 
-      <!-- Steve Cannon -->
-      <div class="fade-in" style="display:grid;grid-template-columns:280px 1fr;gap:48px;align-items:start;margin-bottom:80px;">
-        <div>
-          <div class="team-card-img" style="width:280px;height:280px;border-radius:16px;">
-            <img src="images/steve-cannon.jpg" alt="Steve Cannon" loading="lazy" style="object-position:center 40%;">
+  <!-- Steve — photo right -->
+  <section class="qpa-team-bio qpa-team-bio--tone-b">
+    <div class="qpa-team-bio__inner qpa-team-bio__inner--photo-right">
+      <div class="qpa-team-bio__content">
+        <div class="qpa-team-bio__discipline">QUANTITATIVE RESEARCH</div>
+        <h2 class="qpa-team-bio__name">Steve Cannon</h2>
+        <div class="qpa-team-bio__title">Chief Quantitative Analyst</div>
+        <div class="qpa-team-bio__prose">
+          <p>Steve leads quantitative research at QPA. He develops and validates the systematic models that drive our strategies, oversees signal integrity, and maintains the research discipline that separates rigorous quantitative work from black-box systems.</p>
+          <p>His career in quantitative finance spans more than two decades at firms that built modern systematic investing -- AQR, Two Sigma, the Abu Dhabi Investment Authority, and Interactive Brokers. Across those roles, Steve has led data and automation engineering work that underpins some of the largest systematic investment operations in the world.</p>
+          <p>Before quant, Steve led engineering at Oven, a New York e-commerce firm where he built the team behind the first e-commerce site for Microsoft and early work for Tiffany &amp; Co., MoMA, and IBM. He then spent several years as VP of Software Development at Netomat, an early platform for multimedia authoring and social sharing.</p>
+          <p>He approaches investing the way a physicist approaches a research problem: data first, structure second, emotion nowhere.</p>
+          <p>Steve holds an A.B. in Physics (<em>cum laude</em>) from Columbia University and completed graduate studies in mathematical physics at the Center for Relativity at the University of Texas at Austin, working under C&eacute;cile DeWitt-Morette on pin groups. Outside of work, Steve spends time with his family, walks on the beach in Clearwater, Florida, and makes art.</p>
+        </div>
+        <div class="qpa-team-bio__firms qpa-team-bio__firms--grid">
+          <div class="qpa-team-bio__firms-label">INSTITUTIONAL BACKGROUND</div>
+          <div class="qpa-team-bio__firms-list">
+            <div>AQR</div>
+            <div>Two Sigma</div>
+            <div>Abu Dhabi Investment Authority</div>
+            <div>Interactive Brokers</div>
           </div>
         </div>
-        <div>
-          <h3 style="font-size:1.5rem;margin-bottom:4px;">Steve Cannon</h3>
-          <p class="role" style="margin-bottom:20px;">Chief Quantitative Analyst</p>
-          <p style="color:var(--text-light);line-height:1.8;margin-bottom:16px;">Steve leads quantitative research at Quant Portfolio Advisors. He develops and validates the systematic models that drive our strategies, oversees signal integrity, and maintains the research discipline that separates rigorous quantitative work from black-box systems.</p>
-          <p style="color:var(--text-light);line-height:1.8;margin-bottom:16px;">Steve's career in quantitative finance spans more than two decades at firms that built modern systematic investing:</p>
-          <ul style="color:var(--text-light);line-height:1.8;margin-bottom:16px;padding-left:20px;list-style:disc;">
-            <li style="margin-bottom:12px;"><strong>AQR Capital Management</strong> -- Head of Model Data, leading automation engineering across more than 400 investing processes and building out the platform for AI, alternative data, and shorter-horizon trading</li>
-            <li style="margin-bottom:12px;"><strong>Two Sigma</strong> -- Lead of the Big Data engineering team, co-winner of the firm's Engineering Innovation award, responsible for the infrastructure that enabled deep-learning-based research</li>
-            <li style="margin-bottom:12px;"><strong>Abu Dhabi Investment Authority</strong> -- Data Engineering Lead on the Q-Team, launching quantitative investing at one of the world's largest sovereign wealth funds</li>
-            <li style="margin-bottom:12px;"><strong>Interactive Brokers</strong> -- Head of Referential Data for a decade at the firm that pioneered fully automated trading, building the data framework that made that automation possible</li>
-          </ul>
-          <p style="color:var(--text-light);line-height:1.8;margin-bottom:16px;">Before quant, Steve led engineering at Oven, a New York e-commerce firm where he built the team behind the first e-commerce site for Microsoft and early work for Tiffany & Co., MoMA, and IBM. He then spent several years as VP of Software Development at Netomat, one of the earliest platforms for multimedia authoring and social sharing.</p>
-          <p style="color:var(--text-light);line-height:1.8;margin-bottom:16px;">He approaches investing the way a physicist approaches a research problem: data first, structure second, emotion nowhere.</p>
-          <p style="font-size:0.85rem;color:var(--text-light);font-style:italic;">A.B. Physics (cum laude), Columbia University &bull; Graduate studies in mathematical physics, Center for Relativity, University of Texas at Austin (working under C&eacute;cile DeWitt-Morette on pin groups)</p>
-          <p style="font-size:0.85rem;color:var(--text-light);margin-top:8px;">Outside of work, Steve spends time with his family, walks on the beach in Clearwater, Florida, and makes art.</p>
-        </div>
       </div>
+      <div class="qpa-team-bio__photo">
+        <img src="images/steve-cannon.jpg" alt="Steve Cannon">
+      </div>
+    </div>
+  </section>
 
-      <!-- John Carrington -->
-      <div class="fade-in" style="display:grid;grid-template-columns:280px 1fr;gap:48px;align-items:start;margin-bottom:80px;">
-        <div>
-          <div class="team-card-img" style="width:280px;height:280px;border-radius:16px;">
-            <img src="images/john-carrington.jpg" alt="John Carrington" loading="lazy" style="object-position:center 15%;">
-          </div>
+  <!-- John — photo left -->
+  <section class="qpa-team-bio qpa-team-bio--tone-a">
+    <div class="qpa-team-bio__inner qpa-team-bio__inner--photo-left">
+      <div class="qpa-team-bio__photo">
+        <img src="images/john-carrington.jpg" alt="John Carrington">
+      </div>
+      <div class="qpa-team-bio__content">
+        <div class="qpa-team-bio__discipline">WEALTH INTEGRATION</div>
+        <h2 class="qpa-team-bio__name">John Carrington</h2>
+        <div class="qpa-team-bio__title">Chief Wealth Officer</div>
+        <div class="qpa-team-bio__prose">
+          <p>John bridges the gap between investment strategy and real client life. He makes sure the committee's work fits the tax situations, planning objectives, estate structures, and specific constraints each advisor brings to the table.</p>
+          <p>His 20 years of experience span Salt Wealth Partners, Eide Bailly (a Top 20 CPA firm where he helped build the wealth management practice across the Mountain West), and Merrill Lynch. That combination -- Wall Street, Big Four-adjacent tax, and independent wealth -- is unusual, and it's what lets him speak fluently to advisors about both the investment side and the planning side of the relationship.</p>
+          <blockquote class="qpa-team-bio__quote">"For most of our clients, we manage their entire livelihood. That's a weight I feel every day. It's kept me up at night -- though hopefully, that's what helps our clients sleep."</blockquote>
+          <p>He holds a B.A. in Economics from Brigham Young University.</p>
         </div>
-        <div>
-          <h3 style="font-size:1.5rem;margin-bottom:4px;">John Carrington</h3>
-          <p class="role" style="margin-bottom:20px;">Chief Wealth Officer</p>
-          <p style="color:var(--text-light);line-height:1.8;margin-bottom:16px;">John bridges the gap between investment strategy and real client life. He makes sure the committee's output aligns with the tax situations, planning objectives, estate structures, and specific constraints each advisor brings to the table.</p>
-          <p style="color:var(--text-light);line-height:1.8;margin-bottom:16px;">His 20 years of experience span Salt Wealth Partners, Eide Bailly (a Top 20 CPA firm where he helped build the wealth management practice across the Mountain West), and Merrill Lynch. That combination -- Wall Street, Big Four-adjacent tax, and independent wealth -- is unusual, and it's what lets him speak fluently to advisors about both the investment side and the planning side of the relationship.</p>
-          <p style="color:var(--text-light);line-height:1.8;margin-bottom:16px;">John's view of the work is direct: <em>"For most of our clients, we manage their entire livelihood. That's a weight I feel every day. It's kept me up at night -- though hopefully, that's what helps our clients sleep."</em></p>
-          <p style="font-size:0.85rem;color:var(--text-light);font-style:italic;">B.A. Economics, Brigham Young University</p>
+        <div class="qpa-team-bio__firms qpa-team-bio__firms--stack">
+          <div class="qpa-team-bio__firms-label">INSTITUTIONAL BACKGROUND</div>
+          <div class="qpa-team-bio__firms-list">
+            <div>Salt Wealth Partners</div>
+            <div>Eide Bailly</div>
+            <div>Merrill Lynch</div>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
   <!-- HOW THE COMMITTEE WORKS -->
-  <section class="section" style="background:#F5F0E8;">
-    <div class="container">
-      <div class="section-header fade-in">
-        <h2>How the Committee Works Together</h2>
+  <section class="qpa-committee">
+    <div class="qpa-committee__inner">
+      <div class="qpa-committee__eyebrow">HOW THE COMMITTEE WORKS</div>
+      <h2 class="qpa-committee__heading">Three disciplines.<br>One working body.</h2>
+      <div class="qpa-committee__prose">
+        <p>An investment committee isn't a signoff ritual. It's a working body that stress-tests decisions before they reach client portfolios.</p>
+        <p>Ryan brings allocation decisions and risk observations. Steve brings model outputs, signal reviews, and research updates. John brings the advisor and client context that keeps the work grounded. Decisions are documented. Changes to strategy are traceable.</p>
       </div>
-      <div class="fade-in" style="max-width:800px;margin:0 auto;">
-        <p style="color:var(--text-light);line-height:1.8;margin-bottom:16px;">Every week, the three of us meet as a working committee. Ryan brings allocation decisions and risk observations. Steve brings model outputs, signal reviews, and research updates. John brings the advisor and client context that keeps the work grounded.</p>
-        <p style="color:var(--text-light);line-height:1.8;margin-bottom:32px;">It functions the way an investment committee is supposed to function -- not as a signoff ritual, but as a genuine working body that stress-tests decisions before they reach client portfolios.</p>
-
-        <p style="font-weight:600;margin-bottom:20px;">For advisors working with us, that means three things:</p>
-        <div class="feature-list" style="margin-bottom:0;">
-          <div class="feature-item" style="margin-bottom:16px;">
-            <div class="feature-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg></div>
-            <div><p style="font-size:0.95rem;color:var(--text-light);">Institutional research discipline behind every allocation decision</p></div>
+      <div class="qpa-committee__chairs">
+        <div class="qpa-committee__chair">
+          <div class="qpa-committee__chair-name">Architecture</div>
+          <div class="qpa-committee__chair-attribution">Ryan &middot; CIO</div>
+          <div class="qpa-committee__chair-body">Strategic allocation design and risk budgeting frameworks. Portfolios built on structure, not intuition.</div>
+        </div>
+        <div class="qpa-committee__chair">
+          <div class="qpa-committee__chair-name">Research</div>
+          <div class="qpa-committee__chair-attribution">Steve &middot; Chief Quant</div>
+          <div class="qpa-committee__chair-body">Systematic model development, signal integrity, and research discipline. Institutional-grade methodology, not guesswork.</div>
+        </div>
+        <div class="qpa-committee__chair">
+          <div class="qpa-committee__chair-name">Integration</div>
+          <div class="qpa-committee__chair-attribution">John &middot; Chief Wealth Officer</div>
+          <div class="qpa-committee__chair-body">Alignment with tax, planning, and advisor-specific constraints. The investment strategy fits the whole picture.</div>
+        </div>
+      </div>
+      <div class="qpa-committee__outcomes">
+        <div class="qpa-committee__outcomes-label">WHAT THIS MEANS FOR YOU</div>
+        <div class="qpa-committee__outcomes-grid">
+          <div class="qpa-committee__outcome">
+            <div class="qpa-committee__outcome-title">Research discipline</div>
+            <div class="qpa-committee__outcome-body">behind every allocation decision.</div>
           </div>
-          <div class="feature-item" style="margin-bottom:16px;">
-            <div class="feature-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg></div>
-            <div><p style="font-size:0.95rem;color:var(--text-light);">Documented governance you can show clients, prospects, and regulators</p></div>
+          <div class="qpa-committee__outcome">
+            <div class="qpa-committee__outcome-title">Documented governance</div>
+            <div class="qpa-committee__outcome-body">you can show clients, prospects, and regulators.</div>
           </div>
-          <div class="feature-item">
-            <div class="feature-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg></div>
-            <div><p style="font-size:0.95rem;color:var(--text-light);">Clear ownership of every function, with no gray areas between research, construction, and implementation</p></div>
+          <div class="qpa-committee__outcome">
+            <div class="qpa-committee__outcome-title">Clear ownership</div>
+            <div class="qpa-committee__outcome-body">of every function. No gray areas, no handoffs that fall through.</div>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- CTA BANNER -->
-  <section class="cta-banner">
-    <div class="container">
-      <h2>Ready to Add This Committee to Your Practice?</h2>
-      <p>A 30-minute conversation is the starting point. No pitch, no pressure -- just an honest look at whether the fit is right.</p>
-      <a href="contact.html" class="btn btn-light">Start a Conversation</a>
+  <!-- CTA -->
+  <section class="qpa-cta">
+    <div class="qpa-cta__glow" aria-hidden="true"></div>
+    <div class="qpa-cta__inner">
+      <div class="qpa-cta__eyebrow">READY WHEN YOU ARE</div>
+      <h2 class="qpa-cta__heading">You've met the committee.</h2>
+      <p class="qpa-cta__lede">The next step is a conversation -- thirty minutes, no pressure, just an honest look at whether the fit is right for your practice.</p>
+      <div class="qpa-cta__actions">
+        <a href="contact.html" class="qpa-cta__button qpa-cta__button--primary">Start a conversation</a>
+        <a href="what-we-do.html" class="qpa-cta__button qpa-cta__button--secondary">See what we deliver</a>
+      </div>
     </div>
   </section>
 
   <!-- FOOTER -->
-  <footer class="footer">
-    <div class="container">
-      <div class="footer-grid" style="grid-template-columns:1fr;">
-        <div class="footer-brand" style="text-align:center;max-width:600px;margin:0 auto;">
-          <a href="index.html" class="logo" style="justify-content:center;">
-            <img src="images/logo.svg" alt="Quant Portfolio Advisors">
+  <footer class="qpa-footer">
+    <div class="qpa-footer__inner">
+      <div class="qpa-footer__top">
+        <div class="qpa-footer__brand">
+          <a href="index.html" class="qpa-footer__logo" aria-label="Quant Portfolio Advisors home">
+            <img src="images/logo.svg" alt="Quant Portfolio Advisors" class="qpa-footer__logo-img">
           </a>
-          <p>You focus on your clients. We bring the quantitative rigor, disciplined portfolio construction, and institutional-grade asset management behind them.</p>
-          <div class="footer-social" style="justify-content:center;">
-            <a href="#" aria-label="LinkedIn"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a>
-          </div>
+          <p class="qpa-footer__tagline">The outsourced investment committee for independent wealth advisors.</p>
+          <p class="qpa-footer__dba">Quant Portfolio Advisors is a DBA of Elysium Wealth Management, LLC, an SEC-registered investment adviser.</p>
         </div>
-      </div>
-      <div class="footer-bottom" style="justify-content:center;text-align:center;">
-        <div>
-          <p>&copy; 2026 Quant Portfolio Advisors. All rights reserved.</p>
-          <div class="footer-legal" style="justify-content:center;margin-top:12px;">
+        <div class="qpa-footer__column">
+          <div class="qpa-footer__column-title">EXPLORE</div>
+          <nav class="qpa-footer__links" aria-label="Explore">
+            <a href="what-we-do.html">What We Do</a>
+            <a href="strategies.html">Strategies</a>
+            <a href="our-approach.html">Our Approach</a>
+            <a href="team.html">Team</a>
+          </nav>
+        </div>
+        <div class="qpa-footer__column">
+          <div class="qpa-footer__column-title">CONNECT</div>
+          <nav class="qpa-footer__links" aria-label="Connect">
+            <a href="contact.html">Start a conversation</a>
+            <a href="mailto:contact@qpa.com">contact@qpa.com</a>
+            <a href="https://linkedin.com" target="_blank" rel="noopener" aria-label="LinkedIn"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="vertical-align:middle;"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a>
+          </nav>
+        </div>
+        <div class="qpa-footer__column">
+          <div class="qpa-footer__column-title">DISCLOSURES</div>
+          <nav class="qpa-footer__links" aria-label="Disclosures">
+            <a href="documents/form-crs.pdf">Form CRS</a>
+            <a href="documents/form-adv-part2a.pdf">Form ADV Part 2A</a>
+            <a href="documents/privacy-policy.pdf">Privacy</a>
             <a href="disclosures.html">Disclosures</a>
-            <a href="documents/form-crs.pdf" target="_blank">Form CRS</a>
-            <a href="documents/form-adv-part2a.pdf" target="_blank">Form ADV Part 2A</a>
-          </div>
+          </nav>
         </div>
       </div>
-      <div class="footer-disclosure" style="text-align:center;">
-        Investment advisory services offered through Elysium Wealth Management, an SEC-registered investment adviser, dba Quant Portfolio Advisors. Past performance is not indicative of future results. Investment advisory services involve risk, including possible loss of principal.
+      <div class="qpa-footer__bottom">
+        <p class="qpa-footer__legal">Investment advisory services offered through Elysium Wealth Management, LLC, an SEC-registered investment adviser, doing business as Quant Portfolio Advisors. Registration does not imply a certain level of skill or training. Past performance is not indicative of future results. Investment advisory services involve risk, including possible loss of principal. QPA works with independent financial advisors. Individual investors, please contact a QPA-affiliated advisor.</p>
+        <div class="qpa-footer__copyright">&copy; 2026 Quant Portfolio Advisors</div>
       </div>
-      <p style="text-align:center;font-size:0.75rem;color:rgba(255,255,255,0.4);margin-top:16px;">QPA works through independent advisors. Individual investors, please work with a QPA-affiliated advisor.</p>
     </div>
   </footer>
 

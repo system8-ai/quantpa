@@ -10,17 +10,17 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
   <!-- Favicon: modern browsers (auto light/dark) -->
-  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
 
   <!-- Favicon: PNG fallback for older browsers -->
-  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png" />
-  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16.png" />
 
   <!-- iOS home screen -->
-  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
 
   <!-- Android / PWA -->
-  <link rel="manifest" href="/site.webmanifest" />
+  <link rel="manifest" href="site.webmanifest" />
 
   <!-- Theme color for Android chrome + iOS Safari status bar -->
   <meta name="theme-color" content="#1E120A" />
@@ -39,111 +39,181 @@
         <a href="strategies.html">Strategies</a>
         <a href="our-approach.html">Our Approach</a>
         <a href="team.html">Team</a>
-        <a href="contact.html" class="active">Contact</a>
+        <a href="contact.html" aria-current="page">Contact</a>
       </nav>
     </div>
   </header>
 
-  <!-- PAGE HERO -->
-  <section class="page-hero">
-    <div class="container">
-      <h1>Book a 30-Minute Conversation</h1>
-      <p>No pitch. No pressure. Just an honest look at whether QPA is the right fit for your practice.</p>
+  <!-- HERO -->
+  <section class="qpa-contact-hero">
+    <div class="qpa-contact-hero__image" aria-hidden="true">
+      <img src="images/hero-bg.jpg" alt="">
+      <div class="qpa-contact-hero__overlay"></div>
+      <div class="qpa-contact-hero__vignette"></div>
+    </div>
+    <div class="qpa-contact-hero__inner">
+      <div class="qpa-contact-hero__eyebrow">CONTACT</div>
+      <h1 class="qpa-contact-hero__heading">Let's talk.</h1>
+      <p class="qpa-contact-hero__lede">A working conversation about your practice, your clients, and whether QPA fits what you're trying to do. No pitch, no pressure, no sales theater -- just a 30-minute exchange that either leads somewhere useful or doesn't.</p>
     </div>
   </section>
 
-  <!-- CONSULTATION FORM -->
-  <section id="consultation" class="section section-light">
-    <div class="container">
-      <div style="display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:start;">
-
-        <!-- Form -->
-        <div class="fade-in">
-          <h2 style="font-size:2rem;margin-bottom:8px;">Here's How to Get Started</h2>
-          <p style="color:var(--text-light);margin-bottom:32px;">Tell us where you are and where you want to be. We'll connect you with the right person for a confidential, no-obligation conversation.</p>
-
-          <form id="contact-form">
-            <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;">
-              <div class="form-group">
-                <label for="firstName">First Name</label>
-                <input type="text" id="firstName" name="firstName" required>
-              </div>
-              <div class="form-group">
-                <label for="lastName">Last Name</label>
-                <input type="text" id="lastName" name="lastName" required>
-              </div>
-            </div>
-            <div class="form-group">
-              <label for="email">Email</label>
-              <input type="email" id="email" name="email" required>
-            </div>
-            <div class="form-group">
-              <label for="phone">Phone</label>
-              <input type="tel" id="phone" name="phone">
-            </div>
-            <div class="form-group">
-              <label for="challenge">What best describes your situation?</label>
-              <select id="challenge" name="challenge">
-                <option value="">Select one...</option>
-                <option value="breakaway">Breaking away from a wirehouse/BD</option>
-                <option value="ria-outsource">Established RIA looking to outsource</option>
-                <option value="leaving-ria">Leaving an independent RIA</option>
-                <option value="succession">Succession planning</option>
-                <option value="tamp">TAMP / asset management services</option>
-                <option value="investor">I'm an investor looking for an advisor</option>
-                <option value="other">Other</option>
-              </select>
-            </div>
-            <div class="form-group">
-              <label for="message">Tell us more (optional)</label>
-              <textarea id="message" name="message" rows="4" placeholder="Share any details about your practice, goals, or questions..."></textarea>
-            </div>
-            <div class="form-group">
-              <label for="source">How did you hear about QPA?</label>
-              <select id="source" name="source">
-                <option value="">Select one...</option>
-                <option value="referral">Referral from a colleague</option>
-                <option value="google">Google search</option>
-                <option value="ai-search">AI search (ChatGPT, Perplexity, etc.)</option>
-                <option value="linkedin">LinkedIn</option>
-                <option value="media">Industry media / publication</option>
-                <option value="conference">Conference or event</option>
-                <option value="other">Other</option>
-              </select>
-            </div>
-            <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center;">Submit Request</button>
-          </form>
-        </div>
-
-        <!-- Info sidebar -->
-        <div class="fade-in">
-          <div class="contact-info-card">
-            <h3>What to Expect</h3>
-            <div class="contact-detail">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-              <p>A confidential, 30-minute conversation with a member of our team</p>
-            </div>
-            <div class="contact-detail">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-              <p>An honest assessment of whether QPA's approach fits your practice</p>
-            </div>
-            <div class="contact-detail">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-              <p>A clear picture of how our strategies and infrastructure work</p>
-            </div>
-            <div class="contact-detail">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-              <p>No obligation. No follow-up pressure. Just clarity.</p>
-            </div>
+  <!-- WHAT TO EXPECT -->
+  <section class="qpa-contact-expect">
+    <div class="qpa-contact-expect__inner">
+      <div class="qpa-contact-expect__header">
+        <div class="qpa-contact-expect__eyebrow">WHAT TO EXPECT</div>
+        <h2 class="qpa-contact-expect__heading">A meeting calibrated to the work.</h2>
+        <p class="qpa-contact-expect__lede">We take the first meeting seriously because you do. Here's how it's structured so your time is well-spent whether the fit works out or not.</p>
+      </div>
+      <div class="qpa-contact-expect__grid">
+        <div class="qpa-contact-expect__item">
+          <div class="qpa-contact-expect__item-header">
+            <div class="qpa-contact-expect__item-number">30</div>
+            <div class="qpa-contact-expect__item-unit">MINUTES</div>
           </div>
+          <div class="qpa-contact-expect__item-title">Enough time, not too much.</div>
+          <div class="qpa-contact-expect__item-body">A real conversation, not a pitch meeting. If we need more time at the end, we schedule it. We don't drag the first meeting.</div>
+        </div>
+        <div class="qpa-contact-expect__item">
+          <div class="qpa-contact-expect__item-header">
+            <div class="qpa-contact-expect__item-number">0</div>
+            <div class="qpa-contact-expect__item-unit">SLIDES</div>
+          </div>
+          <div class="qpa-contact-expect__item-title">No presentation deck.</div>
+          <div class="qpa-contact-expect__item-body">You've read the website. If you want specifics on anything you saw, we go there. If you want to talk about your book, we go there instead.</div>
+        </div>
+        <div class="qpa-contact-expect__item">
+          <div class="qpa-contact-expect__item-header">
+            <div class="qpa-contact-expect__item-number">3</div>
+            <div class="qpa-contact-expect__item-unit">TOPICS</div>
+          </div>
+          <div class="qpa-contact-expect__item-title">Your book. Your clients. Your questions.</div>
+          <div class="qpa-contact-expect__item-body">We want to understand what you're solving for. The specifics of QPA come after we understand whether QPA is the right answer.</div>
+        </div>
+        <div class="qpa-contact-expect__item">
+          <div class="qpa-contact-expect__item-header">
+            <div class="qpa-contact-expect__item-number">1</div>
+            <div class="qpa-contact-expect__item-unit">OUTCOME</div>
+          </div>
+          <div class="qpa-contact-expect__item-title">A clear next step, or a clean exit.</div>
+          <div class="qpa-contact-expect__item-body">If the fit makes sense, we lay out what a pilot or first engagement looks like. If it doesn't, we say so. No follow-up marketing sequence.</div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-          <div style="margin-top:32px;padding:32px;background:var(--white);border-radius:12px;border:1px solid var(--border);">
-            <h3 style="font-size:1.15rem;margin-bottom:12px;">Our Office</h3>
-            <p style="color:var(--text-light);font-size:0.95rem;line-height:1.7;">
-              Quant Portfolio Advisors<br>
-              1802 W South Jordan Pkwy, Suite 130<br>
-              South Jordan, Utah 84095
-            </p>
+  <!-- CONTACT FORM -->
+  <section class="qpa-contact-form-section">
+    <div class="qpa-contact-form-section__inner">
+      <div class="qpa-contact-form-section__intro">
+        <div class="qpa-contact-form-section__eyebrow">SCHEDULE A CONVERSATION</div>
+        <h2 class="qpa-contact-form-section__heading">The direct path.</h2>
+        <p class="qpa-contact-form-section__lede">Tell us a little about your practice and what's prompting the conversation. We'll respond within one business day with a few meeting options.</p>
+        <div class="qpa-contact-form-section__email-card">
+          <div class="qpa-contact-form-section__email-label">PREFER EMAIL?</div>
+          <div class="qpa-contact-form-section__email-address">contact@quantportfolioadvisors.com</div>
+          <div class="qpa-contact-form-section__email-note">Direct email reaches the same inbox as the form. Either works.</div>
+        </div>
+      </div>
+      <form class="qpa-contact-form" id="contact-form" method="post" action="/contact/submit" novalidate>
+        <div class="qpa-contact-form__row">
+          <div class="qpa-contact-form__field">
+            <label for="contact-name" class="qpa-contact-form__label">NAME</label>
+            <input type="text" id="contact-name" name="name" class="qpa-contact-form__input" placeholder="Your full name" required>
+          </div>
+          <div class="qpa-contact-form__field">
+            <label for="contact-firm" class="qpa-contact-form__label">FIRM</label>
+            <input type="text" id="contact-firm" name="firm" class="qpa-contact-form__input" placeholder="Your advisory firm" required>
+          </div>
+        </div>
+        <div class="qpa-contact-form__field">
+          <label for="contact-email" class="qpa-contact-form__label">EMAIL</label>
+          <input type="email" id="contact-email" name="email" class="qpa-contact-form__input" placeholder="Your work email" required>
+        </div>
+        <div class="qpa-contact-form__field">
+          <div class="qpa-contact-form__label">WHAT'S PROMPTING THIS?</div>
+          <div class="qpa-contact-form__reasons">
+            <label class="qpa-contact-form__reason"><input type="radio" name="reason" value="exploring" checked><span>Exploring a fit generally</span></label>
+            <label class="qpa-contact-form__reason"><input type="radio" name="reason" value="mandate"><span>Specific client or mandate</span></label>
+            <label class="qpa-contact-form__reason"><input type="radio" name="reason" value="document"><span>Fact sheet or diagnostic</span></label>
+            <label class="qpa-contact-form__reason"><input type="radio" name="reason" value="other"><span>Something else</span></label>
+          </div>
+        </div>
+        <div class="qpa-contact-form__field">
+          <label for="contact-context" class="qpa-contact-form__label">CONTEXT <span class="qpa-contact-form__optional">(OPTIONAL)</span></label>
+          <textarea id="contact-context" name="context" class="qpa-contact-form__textarea" placeholder="Anything helpful to know before we meet -- client situations, constraints, questions you want to work through." rows="4"></textarea>
+        </div>
+        <div class="qpa-contact-form__honeypot" aria-hidden="true">
+          <label for="contact-website">Website (leave this empty)</label>
+          <input type="text" id="contact-website" name="website" tabindex="-1" autocomplete="off">
+        </div>
+        <div class="qpa-contact-form__turnstile">
+          <div class="cf-turnstile" data-sitekey="YOUR_TURNSTILE_SITE_KEY" data-theme="light"></div>
+        </div>
+        <button type="submit" class="qpa-contact-form__submit">Send</button>
+        <div class="qpa-contact-form__disclaimer">By sending this form, you consent to QPA contacting you about the topic you've indicated. We don't add form submissions to marketing lists.</div>
+      </form>
+    </div>
+  </section>
+
+  <!-- SPECIFIC REQUESTS -->
+  <section class="qpa-contact-specific">
+    <div class="qpa-contact-specific__inner">
+      <div class="qpa-contact-specific__header">
+        <div class="qpa-contact-specific__eyebrow">SPECIFIC REQUESTS</div>
+        <h2 class="qpa-contact-specific__heading">Looking for something specific?</h2>
+        <p class="qpa-contact-specific__lede">If you arrived looking for a fact sheet, a sample report, a portfolio diagnostic, or a custom mandate discussion, these go through slightly different paths. Pick the one that fits.</p>
+      </div>
+      <div class="qpa-contact-specific__grid">
+        <div id="fact-sheets" class="qpa-contact-specific__card">
+          <div class="qpa-contact-specific__card-header">
+            <div class="qpa-contact-specific__card-number">01</div>
+            <h3 class="qpa-contact-specific__card-title">Fact sheet request</h3>
+          </div>
+          <p class="qpa-contact-specific__card-body">Hypothetical performance data with full SEC Marketing Rule disclosures for Structured, Momentum, or both. Delivered by email, typically within one business day.</p>
+          <a href="strategies.html#fact-sheets" class="qpa-contact-specific__card-link">Request a fact sheet <span aria-hidden="true">&rarr;</span></a>
+        </div>
+        <div id="sample-report" class="qpa-contact-specific__card">
+          <div class="qpa-contact-specific__card-header">
+            <div class="qpa-contact-specific__card-number">02</div>
+            <h3 class="qpa-contact-specific__card-title">Sample client report</h3>
+          </div>
+          <p class="qpa-contact-specific__card-body">A mock quarterly report formatted in a generic advisor brand so you can see the structure, depth, and white-label format QPA delivers to advisors.</p>
+          <a href="mailto:contact@quantportfolioadvisors.com?subject=Sample%20report%20request" class="qpa-contact-specific__card-link">Request sample report <span aria-hidden="true">&rarr;</span></a>
+        </div>
+        <div id="sample-diagnostic" class="qpa-contact-specific__card">
+          <div class="qpa-contact-specific__card-header">
+            <div class="qpa-contact-specific__card-number">03</div>
+            <h3 class="qpa-contact-specific__card-title">Sample portfolio diagnostic</h3>
+          </div>
+          <p class="qpa-contact-specific__card-body">An example diagnostic showing the components and depth of analysis QPA produces -- useful for seeing how it would land in a prospect or review meeting.</p>
+          <a href="mailto:contact@quantportfolioadvisors.com?subject=Sample%20diagnostic%20request" class="qpa-contact-specific__card-link">Request sample diagnostic <span aria-hidden="true">&rarr;</span></a>
+        </div>
+        <div id="custom-mandate" class="qpa-contact-specific__card qpa-contact-specific__card--featured">
+          <div class="qpa-contact-specific__card-tag">BESPOKE</div>
+          <div class="qpa-contact-specific__card-header">
+            <div class="qpa-contact-specific__card-number">04</div>
+            <h3 class="qpa-contact-specific__card-title">Custom mandate discussion</h3>
+          </div>
+          <p class="qpa-contact-specific__card-body">For concentrated positions, complex tax situations, ESG constraints, or other client-specific situations. Direct conversation with the investment committee.</p>
+          <a href="mailto:contact@quantportfolioadvisors.com?subject=Custom%20mandate%20inquiry" class="qpa-contact-specific__card-link">Start a custom conversation <span aria-hidden="true">&rarr;</span></a>
+        </div>
+      </div>
+      <div class="qpa-contact-specific__office">
+        <div class="qpa-contact-specific__office-col">
+          <div class="qpa-contact-specific__eyebrow">OFFICE</div>
+          <h3 class="qpa-contact-specific__office-heading">Quant Portfolio Advisors</h3>
+          <div class="qpa-contact-specific__office-body">A DBA of Elysium Wealth Management, LLC</div>
+          <div class="qpa-contact-specific__office-body">1802 W South Jordan Pkwy, Suite 130<br>South Jordan, UT 84095</div>
+        </div>
+        <div class="qpa-contact-specific__office-col">
+          <div class="qpa-contact-specific__eyebrow">REGULATORY</div>
+          <h3 class="qpa-contact-specific__office-heading">SEC-registered investment adviser</h3>
+          <div class="qpa-contact-specific__office-body">Investment advisory services are offered through Elysium Wealth Management, LLC. Registration does not imply a certain level of skill or training.</div>
+          <div class="qpa-contact-specific__regulatory-links">
+            <a href="documents/form-adv-part2a.pdf" class="qpa-contact-specific__regulatory-link">Form ADV Part 2A <span aria-hidden="true">&rarr;</span></a>
+            <a href="documents/form-crs.pdf" class="qpa-contact-specific__regulatory-link">Form CRS <span aria-hidden="true">&rarr;</span></a>
           </div>
         </div>
       </div>
@@ -151,33 +221,47 @@
   </section>
 
   <!-- FOOTER -->
-  <footer class="footer">
-    <div class="container">
-      <div class="footer-grid" style="grid-template-columns:1fr;">
-        <div class="footer-brand" style="text-align:center;max-width:600px;margin:0 auto;">
-          <a href="index.html" class="logo" style="justify-content:center;">
-            <img src="images/logo.svg" alt="Quant Portfolio Advisors">
+  <footer class="qpa-footer">
+    <div class="qpa-footer__inner">
+      <div class="qpa-footer__top">
+        <div class="qpa-footer__brand">
+          <a href="index.html" class="qpa-footer__logo" aria-label="Quant Portfolio Advisors home">
+            <img src="images/logo.svg" alt="Quant Portfolio Advisors" class="qpa-footer__logo-img">
           </a>
-          <p>You focus on your clients. We bring the quantitative rigor, disciplined portfolio construction, and institutional-grade asset management behind them.</p>
-          <div class="footer-social" style="justify-content:center;">
-            <a href="#" aria-label="LinkedIn"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a>
-          </div>
+          <p class="qpa-footer__tagline">The outsourced investment committee for independent wealth advisors.</p>
+          <p class="qpa-footer__dba">Quant Portfolio Advisors is a DBA of Elysium Wealth Management, LLC, an SEC-registered investment adviser.</p>
         </div>
-      </div>
-      <div class="footer-bottom" style="justify-content:center;text-align:center;">
-        <div>
-          <p>&copy; 2026 Quant Portfolio Advisors. All rights reserved.</p>
-          <div class="footer-legal" style="justify-content:center;margin-top:12px;">
+        <div class="qpa-footer__column">
+          <div class="qpa-footer__column-title">EXPLORE</div>
+          <nav class="qpa-footer__links" aria-label="Explore">
+            <a href="what-we-do.html">What We Do</a>
+            <a href="strategies.html">Strategies</a>
+            <a href="our-approach.html">Our Approach</a>
+            <a href="team.html">Team</a>
+          </nav>
+        </div>
+        <div class="qpa-footer__column">
+          <div class="qpa-footer__column-title">CONNECT</div>
+          <nav class="qpa-footer__links" aria-label="Connect">
+            <a href="contact.html">Start a conversation</a>
+            <a href="mailto:contact@qpa.com">contact@qpa.com</a>
+            <a href="https://linkedin.com" target="_blank" rel="noopener" aria-label="LinkedIn"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="vertical-align:middle;"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a>
+          </nav>
+        </div>
+        <div class="qpa-footer__column">
+          <div class="qpa-footer__column-title">DISCLOSURES</div>
+          <nav class="qpa-footer__links" aria-label="Disclosures">
+            <a href="documents/form-crs.pdf">Form CRS</a>
+            <a href="documents/form-adv-part2a.pdf">Form ADV Part 2A</a>
+            <a href="documents/privacy-policy.pdf">Privacy</a>
             <a href="disclosures.html">Disclosures</a>
-            <a href="documents/form-crs.pdf" target="_blank">Form CRS</a>
-            <a href="documents/form-adv-part2a.pdf" target="_blank">Form ADV Part 2A</a>
-          </div>
+          </nav>
         </div>
       </div>
-      <div class="footer-disclosure" style="text-align:center;">
-        Investment advisory services offered through Elysium Wealth Management, an SEC-registered investment adviser, dba Quant Portfolio Advisors. Past performance is not indicative of future results. Investment advisory services involve risk, including possible loss of principal.
+      <div class="qpa-footer__bottom">
+        <p class="qpa-footer__legal">Investment advisory services offered through Elysium Wealth Management, LLC, an SEC-registered investment adviser, doing business as Quant Portfolio Advisors. Registration does not imply a certain level of skill or training. Past performance is not indicative of future results. Investment advisory services involve risk, including possible loss of principal. QPA works with independent financial advisors. Individual investors, please contact a QPA-affiliated advisor.</p>
+        <div class="qpa-footer__copyright">&copy; 2026 Quant Portfolio Advisors</div>
       </div>
-      <p style="text-align:center;font-size:0.75rem;color:rgba(255,255,255,0.4);margin-top:16px;">QPA works through independent advisors. Individual investors, please work with a QPA-affiliated advisor.</p>
     </div>
   </footer>
 
@@ -185,6 +269,7 @@
     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 15l-6-6-6 6"/></svg>
   </button>
 
+  <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
   <script src="js/main.js"></script>
 </body>
 </html>

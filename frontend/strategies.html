@@ -10,17 +10,17 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
   <!-- Favicon: modern browsers (auto light/dark) -->
-  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
 
   <!-- Favicon: PNG fallback for older browsers -->
-  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png" />
-  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16.png" />
 
   <!-- iOS home screen -->
-  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
 
   <!-- Android / PWA -->
-  <link rel="manifest" href="/site.webmanifest" />
+  <link rel="manifest" href="site.webmanifest" />
 
   <!-- Theme color for Android chrome + iOS Safari status bar -->
   <meta name="theme-color" content="#1E120A" />
@@ -36,7 +36,7 @@
       <button class="menu-toggle" aria-label="Toggle menu" aria-expanded="false">&#9776;</button>
       <nav class="nav">
         <a href="what-we-do.html">What We Do</a>
-        <a href="strategies.html" class="active">Strategies</a>
+        <a href="strategies.html" aria-current="page">Strategies</a>
         <a href="our-approach.html">Our Approach</a>
         <a href="team.html">Team</a>
         <a href="contact.html">Contact</a>
@@ -44,112 +44,606 @@
     </div>
   </header>
 
-  <!-- PAGE HERO -->
-  <section class="page-hero">
-    <div class="container">
-      <h1>A Strategy for Every Client Conversation</h1>
-      <p>When a client asks "what should I do with this money?" -- you'll have a clear, well-constructed answer.</p>
+  <!-- HERO -->
+  <section class="qpa-strategies-hero">
+    <div class="qpa-strategies-hero__image" aria-hidden="true">
+      <img src="images/hero-bg.jpg" alt="">
+      <div class="qpa-strategies-hero__overlay"></div>
+      <div class="qpa-strategies-hero__vignette"></div>
+    </div>
+    <div class="qpa-strategies-hero__inner">
+      <div class="qpa-strategies-hero__eyebrow">STRATEGIES</div>
+      <h1 class="qpa-strategies-hero__heading">Three strategies. One foundation.</h1>
+      <p class="qpa-strategies-hero__lede">When a client asks "what should I do with this money?" -- you'll have a clear, well-constructed answer.</p>
     </div>
   </section>
 
-  <!-- STRATEGIES -->
-  <section class="section">
-    <div class="container">
-      <div class="card-grid">
-        <div class="card fade-in">
-          <div class="card-icon">
-            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
-          </div>
-          <h3>QPA Structured</h3>
-          <p>Your clients need a core portfolio they can trust through any market. QPA Structured delivers a diversified, quantitatively enhanced strategic allocation built on cross-asset ETF exposure, volatility-adjusted weights, and disciplined risk budgeting. Systematic monitoring keeps it on track, while position caps, liquidity screening, and ongoing correlation review keep risk in check.</p>
+  <!-- FOUNDATION -->
+  <section class="qpa-strategies-foundation">
+    <div class="qpa-strategies-foundation__inner">
+      <div class="qpa-strategies-foundation__header">
+        <div class="qpa-strategies-foundation__eyebrow">THE FOUNDATION</div>
+        <h2 class="qpa-strategies-foundation__heading">What every strategy shares.</h2>
+        <p class="qpa-strategies-foundation__lede">Before the three strategies diverge into their distinct mandates, they share a common backbone -- the same methodology, the same governance, the same operational standards. These are the things a prospective advisor should be able to verify regardless of which strategy is under consideration.</p>
+      </div>
+      <div class="qpa-strategies-foundation__grid">
+        <div class="qpa-strategies-foundation__item">
+          <div class="qpa-strategies-foundation__item-title">Systematic framework</div>
+          <div class="qpa-strategies-foundation__item-body">Every strategy operates within a documented rules-based framework. Rebalance triggers, position limits, risk budgets, and signal thresholds are defined in advance -- not invented during market stress.</div>
         </div>
-        <div class="card fade-in">
-          <div class="card-icon">
-            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
-          </div>
-          <h3>QPA Momentum</h3>
-          <p>Markets move -- your clients' portfolios should move with them. QPA Momentum adapts exposure using systematic time-series signals, combining cross-asset momentum scoring with volatility-aware scaling and monthly reassessment. Turnover monitoring, signal stability review, and position concentration limits ensure the strategy stays disciplined even when markets get noisy.</p>
+        <div class="qpa-strategies-foundation__item">
+          <div class="qpa-strategies-foundation__item-title">Low-cost implementation</div>
+          <div class="qpa-strategies-foundation__item-body">Strategies are built primarily through liquid ETFs. Share-class selection and cost efficiency are reviewed on a regular cadence -- cost drag compounds, and the methodology respects that.</div>
         </div>
-        <div class="card fade-in">
-          <div class="card-icon">
-            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
-          </div>
-          <h3>QPA Custom</h3>
-          <p>Some clients don't fit a template -- and they shouldn't have to. QPA Custom provides constraint-based portfolio construction aligned with your specific parameters, featuring tax-aware implementation, structured discretionary overlays, and fully documented governance. You set the rules; we build and manage around them.</p>
+        <div class="qpa-strategies-foundation__item">
+          <div class="qpa-strategies-foundation__item-title">Committee governance</div>
+          <div class="qpa-strategies-foundation__item-body">The investment committee sets methodology, reviews exceptions, and signs off on strategic changes. Ryan Carrington, Steve Cannon, and John Carrington are accountable for what the strategies do and don't do.</div>
+        </div>
+        <div class="qpa-strategies-foundation__item">
+          <div class="qpa-strategies-foundation__item-title">Full documentation</div>
+          <div class="qpa-strategies-foundation__item-body">Every trade is logged with its rationale. Methodology documents, risk frameworks, and review history are maintained and made available to advisors and their compliance teams on request.</div>
+        </div>
+        <div class="qpa-strategies-foundation__item">
+          <div class="qpa-strategies-foundation__item-title">Risk as foundation</div>
+          <div class="qpa-strategies-foundation__item-body">Volatility, drawdown exposure, and correlation regimes are monitored continuously -- not as a quarterly report item, but as a constant input to the position-management process.</div>
+        </div>
+        <div class="qpa-strategies-foundation__item">
+          <div class="qpa-strategies-foundation__item-title">Tax-aware execution</div>
+          <div class="qpa-strategies-foundation__item-body">Implementation is tax-aware at the trade level. Loss harvesting, wash-sale considerations, and holding-period sensitivity are part of the execution pipeline for taxable accounts.</div>
+        </div>
+      </div>
+      <div class="qpa-strategies-foundation__strategies">
+        <div class="qpa-strategies-foundation__strategies-header">
+          <div class="qpa-strategies-foundation__eyebrow">THE THREE STRATEGIES</div>
+          <h3 class="qpa-strategies-foundation__subheading">One foundation, three mandates.</h3>
+          <p class="qpa-strategies-foundation__sublede">Each strategy takes the shared methodology and applies it to a specific problem. Choose one, combine them, or work with QPA to build a custom variant around a specific client or book.</p>
+        </div>
+        <div class="qpa-strategies-foundation__preview-grid">
+          <a href="#structured" class="qpa-strategies-foundation__preview">
+            <div class="qpa-strategies-foundation__preview-number">01</div>
+            <div class="qpa-strategies-foundation__preview-name">QPA Structured</div>
+            <div class="qpa-strategies-foundation__preview-category">STRATEGIC CORE</div>
+            <div class="qpa-strategies-foundation__preview-desc">A diversified strategic allocation built on cross-asset ETF exposure and disciplined risk budgeting.</div>
+            <div class="qpa-strategies-foundation__preview-link">View strategy <span aria-hidden="true">&darr;</span></div>
+          </a>
+          <a href="#momentum" class="qpa-strategies-foundation__preview">
+            <div class="qpa-strategies-foundation__preview-number">02</div>
+            <div class="qpa-strategies-foundation__preview-name">QPA Momentum</div>
+            <div class="qpa-strategies-foundation__preview-category">ADAPTIVE COMPLEMENT</div>
+            <div class="qpa-strategies-foundation__preview-desc">Exposure that adapts using systematic time-series signals, with monthly reassessment and disciplined risk limits.</div>
+            <div class="qpa-strategies-foundation__preview-link">View strategy <span aria-hidden="true">&darr;</span></div>
+          </a>
+          <a href="#custom" class="qpa-strategies-foundation__preview qpa-strategies-foundation__preview--featured">
+            <div class="qpa-strategies-foundation__preview-tag">BESPOKE</div>
+            <div class="qpa-strategies-foundation__preview-number">03</div>
+            <div class="qpa-strategies-foundation__preview-name">QPA Custom</div>
+            <div class="qpa-strategies-foundation__preview-category">BUILT TO YOUR SPEC</div>
+            <div class="qpa-strategies-foundation__preview-desc">Constraint-based construction built to specific parameters -- tax lots, legacy holdings, ESG, concentration rules.</div>
+            <div class="qpa-strategies-foundation__preview-link">View strategy <span aria-hidden="true">&darr;</span></div>
+          </a>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- PROCESS -->
-  <section class="section section-dark">
-    <div class="container">
-      <div class="section-header fade-in">
-        <h2>How We Build and Manage Your Clients' Portfolios</h2>
-        <p>A clear, repeatable process you can explain to any client in under two minutes.</p>
+  <!-- STRUCTURED -->
+  <section id="structured" class="qpa-strategies-detail qpa-strategies-detail--structured">
+    <div class="qpa-strategies-detail__inner">
+      <div class="qpa-strategies-detail__header">
+        <div class="qpa-strategies-detail__eyebrow">01 -- STRATEGIC CORE</div>
+        <h2 class="qpa-strategies-detail__heading">QPA Structured</h2>
+        <p class="qpa-strategies-detail__tagline">A diversified strategic allocation, engineered for long holding periods.</p>
       </div>
-      <div class="card-grid" style="grid-template-columns: repeat(4, 1fr);">
-        <div style="text-align:center;" class="fade-in">
-          <div style="width:64px;height:64px;border-radius:50%;background:rgba(255,255,255,0.1);display:flex;align-items:center;justify-content:center;margin:0 auto 20px;font-size:1.5rem;font-weight:700;color:var(--accent-light);font-family:'Playfair Display',serif;">1</div>
-          <h3 style="font-size:1.1rem;margin-bottom:8px;">Research</h3>
-          <p style="font-size:0.9rem;color:rgba(255,255,255,0.7);">Quantitative analysis of market conditions, asset class dynamics, and risk factors.</p>
+      <div class="qpa-strategies-detail__body">
+        <div class="qpa-strategies-detail__main">
+          <div class="qpa-strategies-detail__mandate">
+            <div class="qpa-strategies-detail__sublabel">THE MANDATE</div>
+            <p class="qpa-strategies-detail__paragraph">QPA Structured is designed to serve as the strategic core of a long-horizon portfolio. It provides diversified exposure across global equity, fixed income, and alternative asset classes through a systematic allocation framework -- with position sizing informed by volatility, correlation, and risk-budget considerations rather than fixed historical weights.</p>
+            <p class="qpa-strategies-detail__paragraph">It is an evolution of the classic 60/40 framework, built for a market environment where the original 60/40 can no longer be counted on to behave the way it once did.</p>
+          </div>
+          <div class="qpa-strategies-detail__methodology">
+            <div class="qpa-strategies-detail__sublabel">HOW IT WORKS</div>
+            <div class="qpa-strategies-detail__methodology-grid">
+              <div class="qpa-strategies-detail__method">
+                <div class="qpa-strategies-detail__method-title">Cross-asset ETF universe</div>
+                <div class="qpa-strategies-detail__method-body">Global equity, fixed income, and diversifying asset classes accessed through liquid, low-cost ETFs -- screened on liquidity, expense ratio, and tracking quality.</div>
+              </div>
+              <div class="qpa-strategies-detail__method">
+                <div class="qpa-strategies-detail__method-title">Volatility-informed sizing</div>
+                <div class="qpa-strategies-detail__method-body">Position weights reflect estimated volatility contribution -- not arbitrary fixed percentages. Higher-volatility exposures get proportionally smaller allocations.</div>
+              </div>
+              <div class="qpa-strategies-detail__method">
+                <div class="qpa-strategies-detail__method-title">Risk-budget framework</div>
+                <div class="qpa-strategies-detail__method-body">Total portfolio risk is managed to a target range. Allocations adjust when volatility regimes shift so the portfolio's risk profile targets remain consistent with its mandate.</div>
+              </div>
+              <div class="qpa-strategies-detail__method">
+                <div class="qpa-strategies-detail__method-title">Correlation-aware diversification</div>
+                <div class="qpa-strategies-detail__method-body">Diversification benefits are evaluated on current correlation regimes, not historical averages. Concentrated common-factor exposure gets surfaced and constrained.</div>
+              </div>
+              <div class="qpa-strategies-detail__method">
+                <div class="qpa-strategies-detail__method-title">Threshold-based rebalancing</div>
+                <div class="qpa-strategies-detail__method-body">Rebalancing is triggered by drift thresholds, volatility changes, and cash flow events -- not arbitrary calendar dates. The strategy moves when conditions warrant, not when the quarter ends.</div>
+              </div>
+              <div class="qpa-strategies-detail__method">
+                <div class="qpa-strategies-detail__method-title">Tax-aware implementation</div>
+                <div class="qpa-strategies-detail__method-body">For taxable accounts, trade selection considers lot-level tax implications, loss harvesting opportunities, and holding-period sensitivities at execution.</div>
+              </div>
+            </div>
+          </div>
         </div>
-        <div style="text-align:center;" class="fade-in">
-          <div style="width:64px;height:64px;border-radius:50%;background:rgba(255,255,255,0.1);display:flex;align-items:center;justify-content:center;margin:0 auto 20px;font-size:1.5rem;font-weight:700;color:var(--accent-light);font-family:'Playfair Display',serif;">2</div>
-          <h3 style="font-size:1.1rem;margin-bottom:8px;">Construct</h3>
-          <p style="font-size:0.9rem;color:rgba(255,255,255,0.7);">Portfolio construction optimized for risk-adjusted returns and client objectives.</p>
-        </div>
-        <div style="text-align:center;" class="fade-in">
-          <div style="width:64px;height:64px;border-radius:50%;background:rgba(255,255,255,0.1);display:flex;align-items:center;justify-content:center;margin:0 auto 20px;font-size:1.5rem;font-weight:700;color:var(--accent-light);font-family:'Playfair Display',serif;">3</div>
-          <h3 style="font-size:1.1rem;margin-bottom:8px;">Monitor</h3>
-          <p style="font-size:0.9rem;color:rgba(255,255,255,0.7);">Continuous monitoring of positions, risk metrics, and market conditions.</p>
-        </div>
-        <div style="text-align:center;" class="fade-in">
-          <div style="width:64px;height:64px;border-radius:50%;background:rgba(255,255,255,0.1);display:flex;align-items:center;justify-content:center;margin:0 auto 20px;font-size:1.5rem;font-weight:700;color:var(--accent-light);font-family:'Playfair Display',serif;">4</div>
-          <h3 style="font-size:1.1rem;margin-bottom:8px;">Rebalance</h3>
-          <p style="font-size:0.9rem;color:rgba(255,255,255,0.7);">Systematic rebalancing with tax-efficient execution and drift management.</p>
+        <aside class="qpa-strategies-detail__reference">
+          <div class="qpa-strategies-detail__reference-label">QUICK REFERENCE</div>
+          <div class="qpa-strategies-detail__spec-list">
+            <div class="qpa-strategies-detail__spec">
+              <div class="qpa-strategies-detail__spec-label">MANDATE</div>
+              <div class="qpa-strategies-detail__spec-value">Strategic core allocation</div>
+            </div>
+            <div class="qpa-strategies-detail__spec">
+              <div class="qpa-strategies-detail__spec-label">TIME HORIZON</div>
+              <div class="qpa-strategies-detail__spec-value">Multi-year, long-horizon</div>
+            </div>
+            <div class="qpa-strategies-detail__spec">
+              <div class="qpa-strategies-detail__spec-label">APPROACH</div>
+              <div class="qpa-strategies-detail__spec-value">Systematic, rules-based</div>
+            </div>
+            <div class="qpa-strategies-detail__spec">
+              <div class="qpa-strategies-detail__spec-label">UNIVERSE</div>
+              <div class="qpa-strategies-detail__spec-value">Global cross-asset ETFs</div>
+            </div>
+            <div class="qpa-strategies-detail__spec">
+              <div class="qpa-strategies-detail__spec-label">REBALANCING</div>
+              <div class="qpa-strategies-detail__spec-value">Threshold-based, not calendar</div>
+            </div>
+            <div class="qpa-strategies-detail__spec">
+              <div class="qpa-strategies-detail__spec-label">GOVERNANCE</div>
+              <div class="qpa-strategies-detail__spec-value">QPA investment committee</div>
+            </div>
+          </div>
+          <div class="qpa-strategies-detail__reference-cta">
+            <a href="strategies.html#fact-sheets" class="qpa-strategies-detail__reference-link">Request fact sheet <span aria-hidden="true">&rarr;</span></a>
+          </div>
+        </aside>
+      </div>
+      <div class="qpa-strategies-detail__use">
+        <div class="qpa-strategies-detail__sublabel">INTENDED USE</div>
+        <h3 class="qpa-strategies-detail__use-heading">Where Structured fits in a book.</h3>
+        <div class="qpa-strategies-detail__use-grid">
+          <div class="qpa-strategies-detail__use-item">
+            <div class="qpa-strategies-detail__use-title">The strategic core</div>
+            <div class="qpa-strategies-detail__use-body">For clients where the investment function is primarily about long-term compounding -- retirement portfolios, wealth preservation, multi-generational wealth.</div>
+          </div>
+          <div class="qpa-strategies-detail__use-item">
+            <div class="qpa-strategies-detail__use-title">Anchor for blended portfolios</div>
+            <div class="qpa-strategies-detail__use-body">When paired with QPA Momentum or other satellite strategies, Structured provides the stable core around which tactical exposures are built.</div>
+          </div>
+          <div class="qpa-strategies-detail__use-item">
+            <div class="qpa-strategies-detail__use-title">Alternative to traditional 60/40</div>
+            <div class="qpa-strategies-detail__use-body">For advisors evolving clients beyond traditional balanced allocations that no longer behave as designed, Structured is a natural progression rather than a disruptive pivot.</div>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- CTA BANNER -->
-  <section class="cta-banner">
-    <div class="container">
-      <h2>Give Your Clients the Portfolios They Deserve</h2>
-      <p>You shouldn't have to choose between serving clients and managing investments. Let's talk about what's possible when you don't have to do both.</p>
-      <a href="contact.html" class="btn btn-light btn-arrow">Book a 30-Minute Conversation</a>
+  <!-- MOMENTUM -->
+  <section id="momentum" class="qpa-strategies-detail qpa-strategies-detail--momentum">
+    <div class="qpa-strategies-detail__inner">
+      <div class="qpa-strategies-detail__header">
+        <div class="qpa-strategies-detail__eyebrow">02 -- ADAPTIVE COMPLEMENT</div>
+        <h2 class="qpa-strategies-detail__heading">QPA Momentum</h2>
+        <p class="qpa-strategies-detail__tagline">Exposure that adapts, with discipline at the center.</p>
+      </div>
+      <div class="qpa-strategies-detail__body">
+        <div class="qpa-strategies-detail__main">
+          <div class="qpa-strategies-detail__mandate">
+            <div class="qpa-strategies-detail__sublabel">THE MANDATE</div>
+            <p class="qpa-strategies-detail__paragraph">QPA Momentum is designed to complement a strategic core with exposure that adapts to measurable shifts in market conditions. Rather than holding fixed allocations across all environments, the strategy uses systematic time-series signals to adjust positioning -- scaling exposure up when signals are constructive, scaling down when they deteriorate.</p>
+            <p class="qpa-strategies-detail__paragraph">The goal isn't to forecast markets. It's to respond to them consistently -- applying a pre-defined framework every month, in every regime, without emotional override.</p>
+          </div>
+          <div class="qpa-strategies-detail__methodology">
+            <div class="qpa-strategies-detail__sublabel">HOW IT WORKS</div>
+            <div class="qpa-strategies-detail__methodology-grid">
+              <div class="qpa-strategies-detail__method">
+                <div class="qpa-strategies-detail__method-title">Time-series signal framework</div>
+                <div class="qpa-strategies-detail__method-body">Positioning reflects systematic measurements of trend, momentum, and volatility across liquid asset classes -- drawn from well-understood academic research, not proprietary pattern-matching.</div>
+              </div>
+              <div class="qpa-strategies-detail__method">
+                <div class="qpa-strategies-detail__method-title">Monthly reassessment</div>
+                <div class="qpa-strategies-detail__method-body">Signals are evaluated on a monthly cadence. Positions are adjusted when signal thresholds are crossed -- not on daily noise and not at arbitrary calendar points.</div>
+              </div>
+              <div class="qpa-strategies-detail__method">
+                <div class="qpa-strategies-detail__method-title">Volatility-aware scaling</div>
+                <div class="qpa-strategies-detail__method-body">Exposure intensity scales with estimated volatility conditions. The strategy naturally moderates position sizes as volatility rises, even when signals remain constructive.</div>
+              </div>
+              <div class="qpa-strategies-detail__method">
+                <div class="qpa-strategies-detail__method-title">Position and concentration limits</div>
+                <div class="qpa-strategies-detail__method-body">Hard caps on individual position sizes and common-factor exposures keep any single signal from dominating the portfolio's risk profile.</div>
+              </div>
+              <div class="qpa-strategies-detail__method">
+                <div class="qpa-strategies-detail__method-title">Turnover discipline</div>
+                <div class="qpa-strategies-detail__method-body">Signal confirmation requirements and minimum-move thresholds prevent unnecessary trading. The strategy adjusts when conditions warrant -- not every time a signal wobbles.</div>
+              </div>
+              <div class="qpa-strategies-detail__method">
+                <div class="qpa-strategies-detail__method-title">Signal-stability review</div>
+                <div class="qpa-strategies-detail__method-body">The investment committee regularly reviews signal performance characteristics. Signals that degrade structurally get retired; new signals are added only after extensive review.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <aside class="qpa-strategies-detail__reference">
+          <div class="qpa-strategies-detail__reference-label">QUICK REFERENCE</div>
+          <div class="qpa-strategies-detail__spec-list">
+            <div class="qpa-strategies-detail__spec">
+              <div class="qpa-strategies-detail__spec-label">MANDATE</div>
+              <div class="qpa-strategies-detail__spec-value">Adaptive complement</div>
+            </div>
+            <div class="qpa-strategies-detail__spec">
+              <div class="qpa-strategies-detail__spec-label">TIME HORIZON</div>
+              <div class="qpa-strategies-detail__spec-value">Multi-year, tactical within</div>
+            </div>
+            <div class="qpa-strategies-detail__spec">
+              <div class="qpa-strategies-detail__spec-label">APPROACH</div>
+              <div class="qpa-strategies-detail__spec-value">Systematic, signal-driven</div>
+            </div>
+            <div class="qpa-strategies-detail__spec">
+              <div class="qpa-strategies-detail__spec-label">UNIVERSE</div>
+              <div class="qpa-strategies-detail__spec-value">Liquid asset-class ETFs</div>
+            </div>
+            <div class="qpa-strategies-detail__spec">
+              <div class="qpa-strategies-detail__spec-label">REBALANCING</div>
+              <div class="qpa-strategies-detail__spec-value">Monthly signal evaluation</div>
+            </div>
+            <div class="qpa-strategies-detail__spec">
+              <div class="qpa-strategies-detail__spec-label">GOVERNANCE</div>
+              <div class="qpa-strategies-detail__spec-value">QPA investment committee</div>
+            </div>
+          </div>
+          <div class="qpa-strategies-detail__reference-cta">
+            <a href="strategies.html#fact-sheets" class="qpa-strategies-detail__reference-link">Request fact sheet <span aria-hidden="true">&rarr;</span></a>
+          </div>
+        </aside>
+      </div>
+      <div class="qpa-strategies-detail__use">
+        <div class="qpa-strategies-detail__sublabel">INTENDED USE</div>
+        <h3 class="qpa-strategies-detail__use-heading">Where Momentum fits in a book.</h3>
+        <div class="qpa-strategies-detail__use-grid">
+          <div class="qpa-strategies-detail__use-item">
+            <div class="qpa-strategies-detail__use-title">Paired with a strategic core</div>
+            <div class="qpa-strategies-detail__use-body">Momentum is designed to complement Structured or another long-horizon allocation -- adding systematic responsiveness without abandoning the core framework.</div>
+          </div>
+          <div class="qpa-strategies-detail__use-item">
+            <div class="qpa-strategies-detail__use-title">For clients with risk tolerance for tactical shifts</div>
+            <div class="qpa-strategies-detail__use-body">Momentum's adaptive positioning means exposure can move meaningfully between rebalances. It suits clients who understand and accept that variability.</div>
+          </div>
+          <div class="qpa-strategies-detail__use-item">
+            <div class="qpa-strategies-detail__use-title">Where disciplined responsiveness matters</div>
+            <div class="qpa-strategies-detail__use-body">For advisors who want systematic risk-on/risk-off behavior without the behavioral inconsistency that can affect discretionary approaches.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CUSTOM -->
+  <section id="custom" class="qpa-strategies-detail qpa-strategies-detail--custom">
+    <div class="qpa-strategies-detail__inner">
+      <div class="qpa-strategies-detail__header">
+        <div class="qpa-strategies-detail__eyebrow-row">
+          <div class="qpa-strategies-detail__eyebrow">03 -- BUILT TO YOUR SPEC</div>
+          <div class="qpa-strategies-detail__featured-tag">BESPOKE</div>
+        </div>
+        <h2 class="qpa-strategies-detail__heading">QPA Custom</h2>
+        <p class="qpa-strategies-detail__tagline">For clients whose situation doesn't fit a template.</p>
+      </div>
+      <div class="qpa-strategies-detail__body">
+        <div class="qpa-strategies-detail__main">
+          <div class="qpa-strategies-detail__mandate">
+            <div class="qpa-strategies-detail__sublabel">THE MANDATE</div>
+            <p class="qpa-strategies-detail__paragraph">Some clients don't fit a model. A concentrated position from a company exit. Large embedded gains. Specific ESG constraints. A legacy portfolio inherited mid-life. Multi-entity tax situations spanning trusts, retirement accounts, and taxable accounts -- each with its own rules.</p>
+            <p class="qpa-strategies-detail__paragraph">QPA Custom is designed to build a portfolio around these constraints rather than force the constraints into a template. The systematic foundation stays -- documented rules, disciplined rebalancing, committee governance. What changes is the parameters. You tell us what the portfolio needs to handle. We build the systematic framework that handles it.</p>
+          </div>
+          <div class="qpa-strategies-detail__methodology">
+            <div class="qpa-strategies-detail__sublabel">HOW IT WORKS</div>
+            <div class="qpa-strategies-detail__methodology-grid">
+              <div class="qpa-strategies-detail__method">
+                <div class="qpa-strategies-detail__method-title">Constraint-based construction</div>
+                <div class="qpa-strategies-detail__method-body">Concentration rules, ESG screens, tax lot sensitivities, legacy holdings, sector caps -- constraints are defined upfront and encoded into the portfolio construction process from day one.</div>
+              </div>
+              <div class="qpa-strategies-detail__method">
+                <div class="qpa-strategies-detail__method-title">Systematic foundation preserved</div>
+                <div class="qpa-strategies-detail__method-body">Custom doesn't mean improvised. The same rules-based framework that governs Structured and Momentum applies -- just with parameters specific to this client's situation.</div>
+              </div>
+              <div class="qpa-strategies-detail__method">
+                <div class="qpa-strategies-detail__method-title">Tax-aware by design</div>
+                <div class="qpa-strategies-detail__method-body">For clients with embedded gains, concentrated positions, or multi-account tax situations, tax implications are considered at the construction stage -- not added on at year-end.</div>
+              </div>
+              <div class="qpa-strategies-detail__method">
+                <div class="qpa-strategies-detail__method-title">Structured discretionary overlay</div>
+                <div class="qpa-strategies-detail__method-body">Where a client's situation calls for judgment calls the systematic framework can't fully capture, overrides are structured, documented, and committee-reviewed -- not ad-hoc.</div>
+              </div>
+              <div class="qpa-strategies-detail__method">
+                <div class="qpa-strategies-detail__method-title">Governed by the investment committee</div>
+                <div class="qpa-strategies-detail__method-body">Custom mandates receive the same committee oversight as flagship strategies. The methodology adapts; the governance doesn't.</div>
+              </div>
+              <div class="qpa-strategies-detail__method">
+                <div class="qpa-strategies-detail__method-title">Fully documented from the start</div>
+                <div class="qpa-strategies-detail__method-body">Constraints, exceptions, and discretionary considerations are captured in writing at the outset. The portfolio's rulebook is explicit and reviewable by advisor, client, and compliance.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <aside class="qpa-strategies-detail__reference qpa-strategies-detail__reference--featured">
+          <div class="qpa-strategies-detail__reference-label">QUICK REFERENCE</div>
+          <div class="qpa-strategies-detail__spec-list">
+            <div class="qpa-strategies-detail__spec">
+              <div class="qpa-strategies-detail__spec-label">MANDATE</div>
+              <div class="qpa-strategies-detail__spec-value">Built to client specifications</div>
+            </div>
+            <div class="qpa-strategies-detail__spec">
+              <div class="qpa-strategies-detail__spec-label">TIME HORIZON</div>
+              <div class="qpa-strategies-detail__spec-value">Aligned to client goals</div>
+            </div>
+            <div class="qpa-strategies-detail__spec">
+              <div class="qpa-strategies-detail__spec-label">APPROACH</div>
+              <div class="qpa-strategies-detail__spec-value">Constraint-based, rules-driven</div>
+            </div>
+            <div class="qpa-strategies-detail__spec">
+              <div class="qpa-strategies-detail__spec-label">UNIVERSE</div>
+              <div class="qpa-strategies-detail__spec-value">Tailored to mandate</div>
+            </div>
+            <div class="qpa-strategies-detail__spec">
+              <div class="qpa-strategies-detail__spec-label">REBALANCING</div>
+              <div class="qpa-strategies-detail__spec-value">Per client parameters</div>
+            </div>
+            <div class="qpa-strategies-detail__spec">
+              <div class="qpa-strategies-detail__spec-label">GOVERNANCE</div>
+              <div class="qpa-strategies-detail__spec-value">QPA investment committee</div>
+            </div>
+            <div class="qpa-strategies-detail__spec">
+              <div class="qpa-strategies-detail__spec-label">ENGAGEMENT</div>
+              <div class="qpa-strategies-detail__spec-value">Consultation-based</div>
+            </div>
+          </div>
+          <div class="qpa-strategies-detail__reference-cta">
+            <a href="contact.html" class="qpa-strategies-detail__reference-link">Discuss a mandate <span aria-hidden="true">&rarr;</span></a>
+          </div>
+        </aside>
+      </div>
+      <div class="qpa-strategies-detail__use">
+        <div class="qpa-strategies-detail__sublabel">INTENDED USE</div>
+        <h3 class="qpa-strategies-detail__use-heading">When Custom is the right answer.</h3>
+        <div class="qpa-strategies-detail__use-grid">
+          <div class="qpa-strategies-detail__use-item">
+            <div class="qpa-strategies-detail__use-title">Concentrated position situations</div>
+            <div class="qpa-strategies-detail__use-body">Post-exit clients with large single-stock holdings, legacy positions, or regulatory restrictions that make standard allocation models unworkable.</div>
+          </div>
+          <div class="qpa-strategies-detail__use-item">
+            <div class="qpa-strategies-detail__use-title">Complex tax considerations</div>
+            <div class="qpa-strategies-detail__use-body">Large embedded gains, multi-entity structures, trust and estate requirements, or specific loss-harvesting mandates that shape what the portfolio can and cannot do.</div>
+          </div>
+          <div class="qpa-strategies-detail__use-item">
+            <div class="qpa-strategies-detail__use-title">Specific values or screens</div>
+            <div class="qpa-strategies-detail__use-body">ESG mandates, sector exclusions, mission-aligned investing, or faith-based screens that require more than an off-the-shelf fund can deliver.</div>
+          </div>
+        </div>
+        <div class="qpa-strategies-detail__how-to-start">
+          <div class="qpa-strategies-detail__how-to-start-label">HOW TO START</div>
+          <p class="qpa-strategies-detail__how-to-start-body">Custom engagements begin with a conversation. Bring the constraint -- the concentrated position, the tax situation, the mandate specific to your client -- and we'll work through what a systematic framework built around it would look like.</p>
+          <a href="contact.html" class="qpa-strategies-detail__how-to-start-link">Start a Custom conversation <span aria-hidden="true">&rarr;</span></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FACT SHEETS -->
+  <section id="fact-sheets" class="qpa-strategies-fact-sheets">
+    <div class="qpa-strategies-fact-sheets__inner">
+      <div class="qpa-strategies-fact-sheets__header">
+        <div class="qpa-strategies-fact-sheets__eyebrow">FACT SHEETS</div>
+        <h2 class="qpa-strategies-fact-sheets__heading">Performance data, properly disclosed.</h2>
+        <p class="qpa-strategies-fact-sheets__lede">QPA fact sheets contain hypothetical performance information with the full disclosures the SEC Marketing Rule requires. They're intended for investment professionals and prospective clients with the context to evaluate them -- which is why we provide them on request rather than posting them publicly.</p>
+      </div>
+      <div class="qpa-strategies-fact-sheets__body">
+        <div class="qpa-strategies-fact-sheets__contents">
+          <div class="qpa-strategies-fact-sheets__column-label">WHAT A FACT SHEET CONTAINS</div>
+          <div class="qpa-strategies-fact-sheets__items">
+            <div class="qpa-strategies-fact-sheets__item">
+              <div class="qpa-strategies-fact-sheets__item-number">01</div>
+              <div class="qpa-strategies-fact-sheets__item-content">
+                <div class="qpa-strategies-fact-sheets__item-title">Strategy description and methodology</div>
+                <div class="qpa-strategies-fact-sheets__item-body">What the strategy does, how positions are selected, how rebalancing is triggered, what risk framework applies.</div>
+              </div>
+            </div>
+            <div class="qpa-strategies-fact-sheets__item">
+              <div class="qpa-strategies-fact-sheets__item-number">02</div>
+              <div class="qpa-strategies-fact-sheets__item-content">
+                <div class="qpa-strategies-fact-sheets__item-title">Hypothetical performance</div>
+                <div class="qpa-strategies-fact-sheets__item-body">Back-tested results across annualized, total, and annual return periods, with full Marketing Rule disclosures on methodology, assumptions, and limitations.</div>
+              </div>
+            </div>
+            <div class="qpa-strategies-fact-sheets__item">
+              <div class="qpa-strategies-fact-sheets__item-number">03</div>
+              <div class="qpa-strategies-fact-sheets__item-content">
+                <div class="qpa-strategies-fact-sheets__item-title">Risk metrics</div>
+                <div class="qpa-strategies-fact-sheets__item-body">Standard deviation, maximum drawdown, and Sharpe ratio across multiple time periods -- measured against benchmark comparisons where appropriate.</div>
+              </div>
+            </div>
+            <div class="qpa-strategies-fact-sheets__item">
+              <div class="qpa-strategies-fact-sheets__item-number">04</div>
+              <div class="qpa-strategies-fact-sheets__item-content">
+                <div class="qpa-strategies-fact-sheets__item-title">Benchmark comparisons</div>
+                <div class="qpa-strategies-fact-sheets__item-body">Performance and risk measures shown against relevant benchmark indexes, with disclosure of benchmark construction and appropriate caveats.</div>
+              </div>
+            </div>
+            <div class="qpa-strategies-fact-sheets__item">
+              <div class="qpa-strategies-fact-sheets__item-number">05</div>
+              <div class="qpa-strategies-fact-sheets__item-content">
+                <div class="qpa-strategies-fact-sheets__item-title">Full regulatory disclosures</div>
+                <div class="qpa-strategies-fact-sheets__item-body">Key assumptions, limitations, fee treatment, and risks -- including the clear labeling of hypothetical performance the Marketing Rule requires.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="qpa-strategies-fact-sheets__form-wrap">
+          <div class="qpa-strategies-fact-sheets__column-label">REQUEST A FACT SHEET</div>
+          <p class="qpa-strategies-fact-sheets__form-intro">Fact sheets are delivered by email, typically within one business day. Tell us which strategy interests you and where to send it.</p>
+          <form class="qpa-strategies-fact-sheets__form">
+            <div class="qpa-strategies-fact-sheets__field">
+              <label for="fact-sheet-name" class="qpa-strategies-fact-sheets__field-label">NAME</label>
+              <input type="text" id="fact-sheet-name" name="name" class="qpa-strategies-fact-sheets__field-input" placeholder="Your full name" required>
+            </div>
+            <div class="qpa-strategies-fact-sheets__field">
+              <label for="fact-sheet-email" class="qpa-strategies-fact-sheets__field-label">EMAIL</label>
+              <input type="email" id="fact-sheet-email" name="email" class="qpa-strategies-fact-sheets__field-input" placeholder="Your work email" required>
+            </div>
+            <div class="qpa-strategies-fact-sheets__field">
+              <label for="fact-sheet-firm" class="qpa-strategies-fact-sheets__field-label">FIRM</label>
+              <input type="text" id="fact-sheet-firm" name="firm" class="qpa-strategies-fact-sheets__field-input" placeholder="Your advisory firm or affiliation" required>
+            </div>
+            <div class="qpa-strategies-fact-sheets__field">
+              <div class="qpa-strategies-fact-sheets__field-label">STRATEGY OF INTEREST</div>
+              <div class="qpa-strategies-fact-sheets__strategy-group">
+                <label class="qpa-strategies-fact-sheets__strategy-option">
+                  <input type="radio" name="strategy" value="structured" required>
+                  <span>Structured</span>
+                </label>
+                <label class="qpa-strategies-fact-sheets__strategy-option">
+                  <input type="radio" name="strategy" value="momentum">
+                  <span>Momentum</span>
+                </label>
+                <label class="qpa-strategies-fact-sheets__strategy-option">
+                  <input type="radio" name="strategy" value="both">
+                  <span>Both</span>
+                </label>
+              </div>
+            </div>
+            <button type="submit" class="qpa-strategies-fact-sheets__submit">Request fact sheet</button>
+          </form>
+          <div class="qpa-strategies-fact-sheets__disclaimer">By requesting a fact sheet, you confirm you are an investment professional or qualified prospective investor. Fact sheets contain hypothetical performance information and are intended for use in evaluating whether QPA's strategies may be appropriate for a given client situation.</div>
+        </div>
+      </div>
+      <blockquote class="qpa-strategies-fact-sheets__pullquote">Fact sheets are one piece of the picture. The conversation about whether a strategy fits your specific practice is the more important one.</blockquote>
+    </div>
+  </section>
+
+  <!-- DISCLOSURES -->
+  <section class="qpa-strategies-disclosures">
+    <div class="qpa-strategies-disclosures__inner">
+      <div class="qpa-strategies-disclosures__header">
+        <div class="qpa-strategies-disclosures__eyebrow">DISCLOSURES</div>
+        <h2 class="qpa-strategies-disclosures__heading">Important information.</h2>
+        <p class="qpa-strategies-disclosures__lede">The following disclosures accompany any discussion of QPA strategies. They describe the firm structure, investment risks, and the nature of performance information QPA may provide. Advisors and compliance teams may request the full disclosure documentation at any time.</p>
+      </div>
+      <div class="qpa-strategies-disclosures__cards">
+        <div class="qpa-strategies-disclosures__card">
+          <div class="qpa-strategies-disclosures__card-header">
+            <div class="qpa-strategies-disclosures__card-number">01</div>
+            <h3 class="qpa-strategies-disclosures__card-title">Firm structure and registration</h3>
+          </div>
+          <p class="qpa-strategies-disclosures__card-body">Quant Portfolio Advisors is a DBA of Elysium Wealth Management, LLC, an SEC-registered investment adviser wholly owned by Elysium Holdings, LLC. Registration with the SEC does not imply a certain level of skill or training.</p>
+          <p class="qpa-strategies-disclosures__card-body">Investment advisory services are offered through Elysium Wealth Management, LLC. Portfolio management services are offered separately as a subadvisor fee apart from Elysium's financial planning, consulting, or asset management services.</p>
+        </div>
+        <div class="qpa-strategies-disclosures__card">
+          <div class="qpa-strategies-disclosures__card-header">
+            <div class="qpa-strategies-disclosures__card-number">02</div>
+            <h3 class="qpa-strategies-disclosures__card-title">Investment risks</h3>
+          </div>
+          <p class="qpa-strategies-disclosures__card-body">Investing involves risk, including the possible loss of principal. Different types of investments and strategies involve varying levels of risk, and there is no guarantee that any specific investment strategy will be profitable or suitable for an individual's financial situation.</p>
+          <p class="qpa-strategies-disclosures__card-body">Diversification and asset allocation do not ensure a profit or protect against loss. Portfolios may experience volatility and may not achieve their stated objectives. Future market conditions, interest rates, and economic factors may differ materially from those reflected in historical periods used in strategy design.</p>
+          <p class="qpa-strategies-disclosures__card-body">Past performance is not indicative of future results.</p>
+        </div>
+        <div class="qpa-strategies-disclosures__card">
+          <div class="qpa-strategies-disclosures__card-header">
+            <div class="qpa-strategies-disclosures__card-number">03</div>
+            <h3 class="qpa-strategies-disclosures__card-title">Hypothetical performance</h3>
+          </div>
+          <p class="qpa-strategies-disclosures__card-body">Any performance figures shown in QPA fact sheets or related materials reflect hypothetical or back-tested results generated by applying QPA's proprietary methodology to historical market data. Hypothetical results do not represent actual trading in client accounts and were achieved with the benefit of hindsight.</p>
+          <p class="qpa-strategies-disclosures__card-body">Hypothetical results may not reflect the impact that material economic or market factors might have had on decision-making if actual client assets were being managed. Results are presented solely to illustrate how the strategy would have performed under the model's assumptions; they are not a promise or guarantee of future results.</p>
+          <p class="qpa-strategies-disclosures__card-body">Hypothetical results reflect deductions for assumed portfolio management fees and fund-level expenses. Results do not reflect advisory, custodial, or other client-specific fees. Actual client returns will vary. Real accounts may experience transaction costs, timing differences, cash flows, account restrictions, and tax effects that materially differ from modeled assumptions.</p>
+          <p class="qpa-strategies-disclosures__card-body">Data inputs may be revised and may contain survivorship or look-ahead biases. No client actually achieved the hypothetical returns shown, and results may over- or under-state performance that would have been realized.</p>
+        </div>
+        <div class="qpa-strategies-disclosures__card">
+          <div class="qpa-strategies-disclosures__card-header">
+            <div class="qpa-strategies-disclosures__card-number">04</div>
+            <h3 class="qpa-strategies-disclosures__card-title">Benchmarks and comparisons</h3>
+          </div>
+          <p class="qpa-strategies-disclosures__card-body">Benchmarks shown in QPA materials are provided for comparison purposes only and may not reflect the strategy's actual risk profile or investable constraints. Benchmark returns do not reflect deductions for management fees, transaction costs, or other expenses. You cannot invest directly in an index.</p>
+          <p class="qpa-strategies-disclosures__card-body">Specific benchmarks used in any fact sheet will be identified along with their construction methodology. Common reference points may include broad equity, fixed income, and balanced indexes published by third-party index providers.</p>
+        </div>
+        <div class="qpa-strategies-disclosures__card">
+          <div class="qpa-strategies-disclosures__card-header">
+            <div class="qpa-strategies-disclosures__card-number">05</div>
+            <h3 class="qpa-strategies-disclosures__card-title">Regulatory documents and additional information</h3>
+          </div>
+          <p class="qpa-strategies-disclosures__card-body">Form ADV Part 2A and Form CRS for Elysium Wealth Management, LLC are available upon request and are filed with the SEC. These documents contain important information about the firm's services, fees, conflicts of interest, and disciplinary history.</p>
+          <p class="qpa-strategies-disclosures__card-body">Upon request, QPA will provide the specific criteria and assumptions underlying any performance figures shown, including calculation methodology, fee and expense assumptions, data sources, model change history, and any periods of hypothetical versus live performance. Prospective investors should consider whether they have the analytical resources and financial experience to evaluate the information provided and should discuss individual circumstances with their financial advisor before making investment decisions.</p>
+          <div class="qpa-strategies-disclosures__card-links">
+            <a href="documents/form-adv-part2a.pdf" class="qpa-strategies-disclosures__card-link">Form ADV Part 2A <span aria-hidden="true">&rarr;</span></a>
+            <a href="documents/form-crs.pdf" class="qpa-strategies-disclosures__card-link">Form CRS <span aria-hidden="true">&rarr;</span></a>
+            <a href="documents/privacy-policy.pdf" class="qpa-strategies-disclosures__card-link">Privacy policy <span aria-hidden="true">&rarr;</span></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="qpa-strategies-cta">
+    <div class="qpa-strategies-cta__glow" aria-hidden="true"></div>
+    <div class="qpa-strategies-cta__inner">
+      <div class="qpa-strategies-cta__eyebrow">BEYOND THE DOCUMENTS</div>
+      <h2 class="qpa-strategies-cta__heading">Strategies are the start.<br>Fit is the conversation.</h2>
+      <p class="qpa-strategies-cta__lede">Fact sheets answer "what does this strategy do." The more useful question is how these strategies fit together in your book -- which clients, which combinations, what the rollout looks like in practice.</p>
+      <p class="qpa-strategies-cta__sublede">Thirty minutes. Bring your book, your constraints, your questions -- we'll work through what a fit might actually look like.</p>
+      <div class="qpa-strategies-cta__actions">
+        <a href="contact.html" class="qpa-strategies-cta__button qpa-strategies-cta__button--primary">Schedule a fit conversation</a>
+        <a href="our-approach.html" class="qpa-strategies-cta__button qpa-strategies-cta__button--secondary">Read our approach</a>
+      </div>
     </div>
   </section>
 
   <!-- FOOTER -->
-  <footer class="footer">
-    <div class="container">
-      <div class="footer-grid" style="grid-template-columns:1fr;">
-        <div class="footer-brand" style="text-align:center;max-width:600px;margin:0 auto;">
-          <a href="index.html" class="logo" style="justify-content:center;">
-            <img src="images/logo.svg" alt="Quant Portfolio Advisors">
+  <footer class="qpa-footer">
+    <div class="qpa-footer__inner">
+      <div class="qpa-footer__top">
+        <div class="qpa-footer__brand">
+          <a href="index.html" class="qpa-footer__logo" aria-label="Quant Portfolio Advisors home">
+            <img src="images/logo.svg" alt="Quant Portfolio Advisors" class="qpa-footer__logo-img">
           </a>
-          <p>You focus on your clients. We bring the quantitative rigor, disciplined portfolio construction, and institutional-grade asset management behind them.</p>
-          <div class="footer-social" style="justify-content:center;">
-            <a href="#" aria-label="LinkedIn"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a>
-          </div>
+          <p class="qpa-footer__tagline">The outsourced investment committee for independent wealth advisors.</p>
+          <p class="qpa-footer__dba">Quant Portfolio Advisors is a DBA of Elysium Wealth Management, LLC, an SEC-registered investment adviser.</p>
         </div>
-      </div>
-      <div class="footer-bottom" style="justify-content:center;text-align:center;">
-        <div>
-          <p>&copy; 2026 Quant Portfolio Advisors. All rights reserved.</p>
-          <div class="footer-legal" style="justify-content:center;margin-top:12px;">
+        <div class="qpa-footer__column">
+          <div class="qpa-footer__column-title">EXPLORE</div>
+          <nav class="qpa-footer__links" aria-label="Explore">
+            <a href="what-we-do.html">What We Do</a>
+            <a href="strategies.html">Strategies</a>
+            <a href="our-approach.html">Our Approach</a>
+            <a href="team.html">Team</a>
+          </nav>
+        </div>
+        <div class="qpa-footer__column">
+          <div class="qpa-footer__column-title">CONNECT</div>
+          <nav class="qpa-footer__links" aria-label="Connect">
+            <a href="contact.html">Start a conversation</a>
+            <a href="mailto:contact@qpa.com">contact@qpa.com</a>
+            <a href="https://linkedin.com" target="_blank" rel="noopener" aria-label="LinkedIn"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="vertical-align:middle;"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a>
+          </nav>
+        </div>
+        <div class="qpa-footer__column">
+          <div class="qpa-footer__column-title">DISCLOSURES</div>
+          <nav class="qpa-footer__links" aria-label="Disclosures">
+            <a href="documents/form-crs.pdf">Form CRS</a>
+            <a href="documents/form-adv-part2a.pdf">Form ADV Part 2A</a>
+            <a href="documents/privacy-policy.pdf">Privacy</a>
             <a href="disclosures.html">Disclosures</a>
-            <a href="documents/form-crs.pdf" target="_blank">Form CRS</a>
-            <a href="documents/form-adv-part2a.pdf" target="_blank">Form ADV Part 2A</a>
-          </div>
+          </nav>
         </div>
       </div>
-      <div class="footer-disclosure" style="text-align:center;">
-        Investment advisory services offered through Elysium Wealth Management, an SEC-registered investment adviser, dba Quant Portfolio Advisors. Past performance is not indicative of future results. Investment advisory services involve risk, including possible loss of principal.
+      <div class="qpa-footer__bottom">
+        <p class="qpa-footer__legal">Investment advisory services offered through Elysium Wealth Management, LLC, an SEC-registered investment adviser, doing business as Quant Portfolio Advisors. Registration does not imply a certain level of skill or training. Past performance is not indicative of future results. Investment advisory services involve risk, including possible loss of principal. QPA works with independent financial advisors. Individual investors, please contact a QPA-affiliated advisor.</p>
+        <div class="qpa-footer__copyright">&copy; 2026 Quant Portfolio Advisors</div>
       </div>
-      <p style="text-align:center;font-size:0.75rem;color:rgba(255,255,255,0.4);margin-top:16px;">QPA works through independent advisors. Individual investors, please work with a QPA-affiliated advisor.</p>
     </div>
   </footer>
 

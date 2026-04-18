@@ -10,17 +10,17 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
   <!-- Favicon: modern browsers (auto light/dark) -->
-  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
 
   <!-- Favicon: PNG fallback for older browsers -->
-  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png" />
-  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16.png" />
 
   <!-- iOS home screen -->
-  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
 
   <!-- Android / PWA -->
-  <link rel="manifest" href="/site.webmanifest" />
+  <link rel="manifest" href="site.webmanifest" />
 
   <!-- Theme color for Android chrome + iOS Safari status bar -->
   <meta name="theme-color" content="#1E120A" />
@@ -37,161 +37,404 @@
       <nav class="nav">
         <a href="what-we-do.html">What We Do</a>
         <a href="strategies.html">Strategies</a>
-        <a href="our-approach.html" class="active">Our Approach</a>
+        <a href="our-approach.html" aria-current="page">Our Approach</a>
         <a href="team.html">Team</a>
         <a href="contact.html">Contact</a>
       </nav>
     </div>
   </header>
 
-  <!-- PAGE HERO -->
-  <section class="page-hero">
-    <div class="container">
-      <h1>Our Approach</h1>
-      <p>You need more than a platform. You need people who understand your world -- and a methodology rigorous enough to hold up under scrutiny.</p>
+  <!-- HERO -->
+  <section class="qpa-approach-hero">
+    <div class="qpa-approach-hero__image" aria-hidden="true">
+      <img src="images/hero-bg.jpg" alt="">
+      <div class="qpa-approach-hero__overlay"></div>
+      <div class="qpa-approach-hero__vignette"></div>
+    </div>
+    <div class="qpa-approach-hero__inner">
+      <div class="qpa-approach-hero__eyebrow">OUR APPROACH</div>
+      <h1 class="qpa-approach-hero__heading">The methodology behind your clients' portfolios.</h1>
+      <p class="qpa-approach-hero__lede">A systematic, rules-based investment process -- built at institutions, refined for independent advisors.</p>
     </div>
   </section>
 
-  <!-- THREE DISCIPLINES -->
-  <section class="section">
-    <div class="container">
-      <div class="section-header fade-in">
-        <h2>Three Disciplines. One Integrated Team.</h2>
-        <p>Most advisors are forced to piece together research, portfolio management, and tax strategy from different providers who don't talk to each other. That fragmentation costs you time, creates risk, and limits what you can offer clients. We built QPA to eliminate that gap.</p>
+  <!-- CONTEXT -->
+  <section class="qpa-approach-context">
+    <div class="qpa-approach-context__inner">
+      <div class="qpa-approach-context__eyebrow">THE CONTEXT</div>
+      <h2 class="qpa-approach-context__heading">The rules that guided investing for a generation are under stress.</h2>
+      <div class="qpa-approach-context__prose">
+        <p class="qpa-approach-context__paragraph">The assumptions that built the last forty years of portfolio practice -- stable correlations, reliable bond ballast, mean-reverting cycles, broad market exposure as a sufficient source of diversification -- are not holding the way they used to.</p>
+        <p class="qpa-approach-context__paragraph">Stocks and bonds declined together in 2022, something the classic 60/40 framework wasn't designed to accommodate. Market concentration has reached levels not seen in generations. Correlation regimes shift faster. Volatility has moved from episodic to structural. Meanwhile, artificial intelligence, geopolitical realignment, and shifts in global capital are rewriting the macro environment in ways that historical data only partially prepares us for.</p>
       </div>
-      <div class="card-grid">
-        <div class="card fade-in">
-          <div class="card-icon">
-            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
-          </div>
-          <h3>Systematic Research</h3>
-          <p>Your clients deserve portfolios built on evidence, not hunches. Our team develops and validates institutional quantitative models -- so every allocation decision has rigorous research behind it.</p>
+      <div class="qpa-approach-context__shifts">
+        <div class="qpa-approach-context__shift">
+          <div class="qpa-approach-context__shift-title">Correlation breakdown</div>
+          <div class="qpa-approach-context__shift-body">The diversification benefits that made 60/40 work for decades have weakened in the current regime.</div>
         </div>
-        <div class="card fade-in">
-          <div class="card-icon">
-            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
-          </div>
-          <h3>Portfolio Architecture</h3>
-          <p>A great model is worthless without disciplined construction. We design strategic allocations with structured risk budgeting -- giving you portfolios you can stand behind in any market conversation.</p>
+        <div class="qpa-approach-context__shift">
+          <div class="qpa-approach-context__shift-title">Market concentration</div>
+          <div class="qpa-approach-context__shift-body">A small number of mega-cap names drive a disproportionate share of index returns and risk.</div>
         </div>
-        <div class="card fade-in">
-          <div class="card-icon">
-            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-          </div>
-          <h3>Wealth Integration</h3>
-          <p>Investment management doesn't exist in a vacuum. We deliver tax-aware implementation aligned with your parameters and your clients' objectives -- because the best portfolio is the one that actually fits their life.</p>
+        <div class="qpa-approach-context__shift">
+          <div class="qpa-approach-context__shift-title">Faster cycles</div>
+          <div class="qpa-approach-context__shift-body">Regime shifts compress into months rather than years -- stretching the lag of traditional rebalancing.</div>
+        </div>
+        <div class="qpa-approach-context__shift">
+          <div class="qpa-approach-context__shift-title">Structural volatility</div>
+          <div class="qpa-approach-context__shift-body">What used to be episodic drawdown risk has become a continuous feature of the landscape.</div>
         </div>
       </div>
-      <div class="fade-in" style="text-align:center;margin-top:48px;max-width:700px;margin-left:auto;margin-right:auto;">
-        <p style="color:var(--text-light);font-size:1.05rem;line-height:1.8;">This integrated structure gives you institutional-grade tools that work within real-world advisory environments -- without sacrificing governance or liquidity.</p>
+      <blockquote class="qpa-approach-context__pullquote">Risk management is no longer a defensive choice. It's foundational to the work.</blockquote>
+    </div>
+  </section>
+
+  <!-- RESPONSE -->
+  <section class="qpa-approach-response">
+    <div class="qpa-approach-response__inner">
+      <div class="qpa-approach-response__eyebrow">THE RESPONSE</div>
+      <h2 class="qpa-approach-response__heading">When intuition fails, discipline has to do the work.</h2>
+      <div class="qpa-approach-response__prose">
+        <p class="qpa-approach-response__paragraph">Investment decisions made under stress look different from investment decisions made under calm. Every experienced advisor knows this. The market that pulled back 20% in six weeks is the same market whose fundamentals you liked two months earlier -- but the decision calculus feels completely different. That's the gap a systematic approach is designed to close.</p>
+        <p class="qpa-approach-response__paragraph">A rules-based process doesn't remove judgment from investing. It relocates it. The thinking happens upstream -- in how the rules are designed, what data informs them, how signals are weighted, when the framework should be reviewed. Once the rules are set, execution is mechanical. That separation is the point. It keeps careful thinking in the calm moments and keeps emotional thinking out of the stressed ones.</p>
+        <p class="qpa-approach-response__paragraph">In a market environment defined by faster cycles, compressed regimes, and structural volatility, the ability to respond consistently -- without recency bias, without confirmation bias, without the fatigue that sets in after a string of difficult quarters -- is not a luxury. It's infrastructure.</p>
+      </div>
+      <div class="qpa-approach-response__definitions">
+        <div class="qpa-approach-response__definition">
+          <div class="qpa-approach-response__definition-label">WHAT SYSTEMATIC IS</div>
+          <div class="qpa-approach-response__definition-body">A pre-defined framework for making decisions -- tested, documented, and applied consistently across market conditions.</div>
+        </div>
+        <div class="qpa-approach-response__definition">
+          <div class="qpa-approach-response__definition-label">WHAT IT DOES</div>
+          <div class="qpa-approach-response__definition-body">Keeps the process constant when markets are volatile, when narratives are loud, and when the temptation to improvise is strongest.</div>
+        </div>
+        <div class="qpa-approach-response__definition">
+          <div class="qpa-approach-response__definition-label">WHY IT MATTERS NOW</div>
+          <div class="qpa-approach-response__definition-body">Because the frequency of stress-test moments has increased -- and discretionary responses at scale compound small mistakes into large ones.</div>
+        </div>
+      </div>
+      <blockquote class="qpa-approach-response__pullquote">The value isn't forecasting. It's discipline.</blockquote>
+    </div>
+  </section>
+
+  <!-- PILLARS -->
+  <section class="qpa-approach-pillars">
+    <div class="qpa-approach-pillars__inner">
+      <div class="qpa-approach-pillars__header">
+        <div class="qpa-approach-pillars__eyebrow">THE PRINCIPLES</div>
+        <h2 class="qpa-approach-pillars__heading">What the work stands on.</h2>
+        <p class="qpa-approach-pillars__lede">Three principles shape every strategy QPA builds and every decision the committee makes. They aren't branding. They're operational commitments -- the things we'd be willing to be held accountable for.</p>
+      </div>
+      <div class="qpa-approach-pillars__grid">
+        <div class="qpa-approach-pillar">
+          <div class="qpa-approach-pillar__header">
+            <div class="qpa-approach-pillar__number">01</div>
+            <div class="qpa-approach-pillar__rule" aria-hidden="true"></div>
+          </div>
+          <h3 class="qpa-approach-pillar__name">Evidence-based</h3>
+          <p class="qpa-approach-pillar__argument">Claims require data. Methodology decisions are grounded in research -- academic, market, empirical. We're willing to change a position when the evidence changes; we're unwilling to hold one because it's convenient.</p>
+          <div class="qpa-approach-pillar__practice">
+            <div class="qpa-approach-pillar__practice-label">IN PRACTICE</div>
+            <ul class="qpa-approach-pillar__practice-list">
+              <li>Factor research informed by peer-reviewed sources</li>
+              <li>Methodology reviewed on a defined cadence</li>
+              <li>Position changes tied to evidence, not narrative</li>
+            </ul>
+          </div>
+        </div>
+        <div class="qpa-approach-pillar">
+          <div class="qpa-approach-pillar__header">
+            <div class="qpa-approach-pillar__number">02</div>
+            <div class="qpa-approach-pillar__rule" aria-hidden="true"></div>
+          </div>
+          <h3 class="qpa-approach-pillar__name">Rules-based</h3>
+          <p class="qpa-approach-pillar__argument">Decisions follow a documented framework. Rebalance triggers, position limits, signal thresholds, and risk budgets are defined in advance -- so execution is consistent across calm markets and stressed ones.</p>
+          <div class="qpa-approach-pillar__practice">
+            <div class="qpa-approach-pillar__practice-label">IN PRACTICE</div>
+            <ul class="qpa-approach-pillar__practice-list">
+              <li>Pre-defined rebalancing thresholds</li>
+              <li>Risk budgets applied at the portfolio level</li>
+              <li>Exceptions documented, not improvised</li>
+            </ul>
+          </div>
+        </div>
+        <div class="qpa-approach-pillar">
+          <div class="qpa-approach-pillar__header">
+            <div class="qpa-approach-pillar__number">03</div>
+            <div class="qpa-approach-pillar__rule" aria-hidden="true"></div>
+          </div>
+          <h3 class="qpa-approach-pillar__name">Transparent</h3>
+          <p class="qpa-approach-pillar__argument">Every decision should be reviewable. A trade, a rebalance, a position change -- each is logged with its rationale. The methodology isn't a black box; it's an argument an advisor can walk through with a client, or with their compliance team.</p>
+          <div class="qpa-approach-pillar__practice">
+            <div class="qpa-approach-pillar__practice-label">IN PRACTICE</div>
+            <ul class="qpa-approach-pillar__practice-list">
+              <li>Trade rationale logged at execution</li>
+              <li>Methodology documentation available on request</li>
+              <li>Decisions reviewable by advisor and compliance</li>
+            </ul>
+          </div>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- HOW WE WORK TOGETHER -->
-  <section class="section section-light">
-    <div class="container">
-      <div class="section-header fade-in">
-        <h2>How We Work Together</h2>
-        <p>You shouldn't have to wonder who's responsible for what. Our team is structured so that every decision has a clear owner -- and every piece of your clients' investment experience is covered.</p>
+  <!-- DISTINCTION -->
+  <section class="qpa-approach-distinction">
+    <div class="qpa-approach-distinction__inner">
+      <div class="qpa-approach-distinction__header">
+        <div class="qpa-approach-distinction__eyebrow">THE DISTINCTION</div>
+        <h2 class="qpa-approach-distinction__heading">Not that kind of quant.</h2>
+        <p class="qpa-approach-distinction__lede">The word "quant" covers a wide range of approaches -- some of which deserve the skepticism they've earned. If you've watched a black-box strategy blow up in an unexpected regime, or a complex model produce opaque decisions nobody could explain to a client, your caution is appropriate. It's also a reason to be specific about what QPA's approach actually is.</p>
       </div>
-      <div class="card-grid">
-        <div class="card fade-in">
-          <div class="card-icon">
-            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+      <div class="qpa-approach-distinction__grid">
+        <div class="qpa-approach-distinction__column qpa-approach-distinction__column--negative">
+          <div class="qpa-approach-distinction__column-label">WHAT QUANT ISN'T</div>
+          <div class="qpa-approach-distinction__column-items">
+            <div class="qpa-approach-distinction__item">
+              <div class="qpa-approach-distinction__item-title">A black box producing unexplainable trades</div>
+              <div class="qpa-approach-distinction__item-body">Models that output decisions nobody on the investment team can walk through aren't decision support -- they're a liability.</div>
+            </div>
+            <div class="qpa-approach-distinction__item">
+              <div class="qpa-approach-distinction__item-title">A forecasting engine promising predictive edge</div>
+              <div class="qpa-approach-distinction__item-body">Nothing about applying math to markets creates genuine predictive certainty. Any approach built on that premise is built on sand.</div>
+            </div>
+            <div class="qpa-approach-distinction__item">
+              <div class="qpa-approach-distinction__item-title">A substitute for investment judgment</div>
+              <div class="qpa-approach-distinction__item-body">Quant approaches that try to eliminate judgment tend to fail at exactly the moment -- regime change -- when judgment is most valuable.</div>
+            </div>
+            <div class="qpa-approach-distinction__item">
+              <div class="qpa-approach-distinction__item-title">Complexity for its own sake</div>
+              <div class="qpa-approach-distinction__item-body">A fifteen-factor model isn't inherently better than a three-factor one. Complexity that doesn't reduce error is just noise dressed up as sophistication.</div>
+            </div>
           </div>
-          <h3>Portfolio Architecture</h3>
-          <p>Led by the Chief Investment Officer, this is where strategic allocation design and risk budgeting frameworks are defined and monitored. You get portfolios built on structure, not intuition.</p>
         </div>
-        <div class="card fade-in">
-          <div class="card-icon">
-            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+        <div class="qpa-approach-distinction__column qpa-approach-distinction__column--positive">
+          <div class="qpa-approach-distinction__column-label">WHAT OUR QUANT IS</div>
+          <div class="qpa-approach-distinction__column-items">
+            <div class="qpa-approach-distinction__item">
+              <div class="qpa-approach-distinction__item-title">A framework for disciplined decisions</div>
+              <div class="qpa-approach-distinction__item-body">Documented rules that enforce consistency -- rebalance triggers, position limits, risk budgets -- so what happens in the portfolio is always explainable.</div>
+            </div>
+            <div class="qpa-approach-distinction__item">
+              <div class="qpa-approach-distinction__item-title">An organizing structure for evidence</div>
+              <div class="qpa-approach-distinction__item-body">Factors, signals, and risk measures drawn from well-understood research -- applied as inputs to judgment, not substitutes for it.</div>
+            </div>
+            <div class="qpa-approach-distinction__item">
+              <div class="qpa-approach-distinction__item-title">Infrastructure that serves the committee</div>
+              <div class="qpa-approach-distinction__item-body">The investment committee decides. The systematic process ensures those decisions are applied consistently, documented thoroughly, and reviewable afterward.</div>
+            </div>
+            <div class="qpa-approach-distinction__item">
+              <div class="qpa-approach-distinction__item-title">Restraint as a feature</div>
+              <div class="qpa-approach-distinction__item-body">We use the level of model complexity the problem actually requires -- no more. A cleaner approach that's understood is worth more than a complex one that isn't.</div>
+            </div>
           </div>
-          <h3>Quantitative Research</h3>
-          <p>The Chief Quantitative Analyst develops and validates systematic models, oversees signal integrity, and maintains research discipline. Your clients' portfolios are backed by institutional-grade methodology -- not guesswork.</p>
-        </div>
-        <div class="card fade-in">
-          <div class="card-icon">
-            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-          </div>
-          <h3>Wealth Integration</h3>
-          <p>The Chief Wealth Officer aligns portfolio construction with your clients' planning objectives, tax considerations, and your specific constraints as an advisor. The investment strategy works because it fits the whole picture.</p>
         </div>
       </div>
-      <div class="fade-in" style="margin-top:64px;">
-        <div style="background:var(--primary);border-radius:16px;padding:48px;color:#fff;">
-          <h3 style="font-size:1.5rem;margin-bottom:32px;text-align:center;color:#fff;font-family:'Playfair Display',serif;">What This Means for You</h3>
-          <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:24px;">
-            <div style="text-align:center;">
-              <div style="width:56px;height:56px;border-radius:50%;background:rgba(141,189,208,0.15);display:flex;align-items:center;justify-content:center;margin:0 auto 16px;">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#8DBDD0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
-              </div>
-              <p style="font-size:0.95rem;color:rgba(255,255,255,0.85);line-height:1.6;">Institutional research discipline behind every decision</p>
-            </div>
-            <div style="text-align:center;">
-              <div style="width:56px;height:56px;border-radius:50%;background:rgba(141,189,208,0.15);display:flex;align-items:center;justify-content:center;margin:0 auto 16px;">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#8DBDD0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
-              </div>
-              <p style="font-size:0.95rem;color:rgba(255,255,255,0.85);line-height:1.6;">Documented governance you can show clients and regulators</p>
-            </div>
-            <div style="text-align:center;">
-              <div style="width:56px;height:56px;border-radius:50%;background:rgba(141,189,208,0.15);display:flex;align-items:center;justify-content:center;margin:0 auto 16px;">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#8DBDD0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-              </div>
-              <p style="font-size:0.95rem;color:rgba(255,255,255,0.85);line-height:1.6;">Implementation aligned with how you actually serve clients</p>
-            </div>
-            <div style="text-align:center;">
-              <div style="width:56px;height:56px;border-radius:50%;background:rgba(141,189,208,0.15);display:flex;align-items:center;justify-content:center;margin:0 auto 16px;">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#8DBDD0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-              </div>
-              <p style="font-size:0.95rem;color:rgba(255,255,255,0.85);line-height:1.6;">Clear separation of responsibilities -- no gray areas</p>
-            </div>
+      <blockquote class="qpa-approach-distinction__pullquote">The goal isn't to replace the advisor's judgment with math. It's to give judgment a framework it can trust -- and a record it can explain.</blockquote>
+    </div>
+  </section>
+
+  <!-- RESTOMOD -->
+  <section class="qpa-approach-restomod">
+    <div class="qpa-approach-restomod__inner">
+      <div class="qpa-approach-restomod__intro">
+        <div class="qpa-approach-restomod__intro-text">
+          <div class="qpa-approach-restomod__eyebrow">THE METAPHOR</div>
+          <h2 class="qpa-approach-restomod__heading">Classic soul.<br>Modern engineering.</h2>
+          <p class="qpa-approach-restomod__paragraph">There's a kind of car restoration called a restomod. The body is preserved -- the lines of the original, the silhouette that made it beautiful in the first place. The mechanicals are entirely modern. New suspension, new brakes, updated electronics. The soul is intact. The engineering has caught up to where the world is now.</p>
+          <p class="qpa-approach-restomod__paragraph">That's a reasonable analogy for how QPA approaches investing.</p>
+        </div>
+        <div class="qpa-approach-restomod__intro-image">
+          <img src="images/restomod.jpg" alt="Singer-style Porsche 911 restomod — classic soul, modern engineering">
+          <div class="qpa-approach-restomod__intro-image-overlay" aria-hidden="true"></div>
+        </div>
+      </div>
+      <div class="qpa-approach-restomod__subsection">
+        <div class="qpa-approach-restomod__subsection-header">
+          <div class="qpa-approach-restomod__eyebrow">WHAT WE PRESERVE</div>
+          <h3 class="qpa-approach-restomod__subheading">The principles worth keeping.</h3>
+          <p class="qpa-approach-restomod__sublede">The investment ideas that earned their reputation -- long holding periods, broad diversification, disciplined cost management, compounding as the primary engine of return -- haven't stopped being true. They've stopped being enough on their own. QPA's methodology is built on top of these principles, not in place of them.</p>
+        </div>
+        <div class="qpa-approach-restomod__grid">
+          <div class="qpa-approach-restomod__item">
+            <div class="qpa-approach-restomod__item-title">Long-term thinking remains central</div>
+            <div class="qpa-approach-restomod__item-body">Every strategy is designed for holding periods measured in years, not quarters. Systematic doesn't mean frequent.</div>
           </div>
-          <div style="margin-top:32px;padding-top:24px;border-top:1px solid rgba(255,255,255,0.12);text-align:center;">
-            <p style="font-size:1.1rem;color:rgba(255,255,255,0.9);line-height:1.7;font-style:italic;">The result is a hybrid framework: systematic at its core, integrated at the advisory level.</p>
+          <div class="qpa-approach-restomod__item">
+            <div class="qpa-approach-restomod__item-title">Diversification is still the starting point</div>
+            <div class="qpa-approach-restomod__item-body">Cross-asset, cross-region, cross-factor. The quant work refines <em>how</em> we diversify; it doesn't replace the need to.</div>
+          </div>
+          <div class="qpa-approach-restomod__item">
+            <div class="qpa-approach-restomod__item-title">Costs still compound against you</div>
+            <div class="qpa-approach-restomod__item-body">Low-cost implementation through ETFs and careful share-class selection. Nothing changes the math: every basis point of fee is a basis point of return.</div>
+          </div>
+          <div class="qpa-approach-restomod__item">
+            <div class="qpa-approach-restomod__item-title">Patience is still a competitive advantage</div>
+            <div class="qpa-approach-restomod__item-body">Most investment mistakes come from acting when waiting would serve better. Systematic process reinforces patience instead of fighting it.</div>
           </div>
         </div>
+      </div>
+      <div class="qpa-approach-restomod__subsection qpa-approach-restomod__subsection--upgrades">
+        <div class="qpa-approach-restomod__subsection-header">
+          <div class="qpa-approach-restomod__eyebrow">WHAT WE UPGRADE</div>
+          <h3 class="qpa-approach-restomod__subheading">Where classic principles needed help.</h3>
+          <p class="qpa-approach-restomod__sublede">The engineering is where the modern work happens -- not as a replacement for tradition, but as the infrastructure that lets tradition survive a market environment it wasn't built for.</p>
+        </div>
+        <div class="qpa-approach-restomod__grid">
+          <div class="qpa-approach-restomod__item">
+            <div class="qpa-approach-restomod__item-title">Rebalancing is systematic, not calendar-driven</div>
+            <div class="qpa-approach-restomod__item-body">Triggers respond to drift and risk conditions, not arbitrary dates. The long-term allocation stays intact; the path to it adapts.</div>
+          </div>
+          <div class="qpa-approach-restomod__item">
+            <div class="qpa-approach-restomod__item-title">Risk is measured continuously, not quarterly</div>
+            <div class="qpa-approach-restomod__item-body">Correlation, concentration, and drawdown exposure are monitored in real-time -- issues get surfaced before they become problems.</div>
+          </div>
+          <div class="qpa-approach-restomod__item">
+            <div class="qpa-approach-restomod__item-title">Factors complement broad exposure</div>
+            <div class="qpa-approach-restomod__item-body">Passive index exposure is the starting point; tilted factor exposures add structure without abandoning the benefits of diversification.</div>
+          </div>
+          <div class="qpa-approach-restomod__item">
+            <div class="qpa-approach-restomod__item-title">Tax awareness is built in, not added later</div>
+            <div class="qpa-approach-restomod__item-body">Lot-level optimization and harvesting considerations are part of the execution pipeline -- not something that happens once a year.</div>
+          </div>
+        </div>
+      </div>
+      <blockquote class="qpa-approach-restomod__pullquote">You keep the beauty of long-term investing. You gain the durability required for this era.</blockquote>
+    </div>
+  </section>
+
+  <!-- HUMAN CENTER -->
+  <section class="qpa-approach-human">
+    <div class="qpa-approach-human__inner">
+      <div class="qpa-approach-human__header">
+        <div class="qpa-approach-human__eyebrow">THE HUMAN CENTER</div>
+        <h2 class="qpa-approach-human__heading">The infrastructure serves judgment. Not the other way around.</h2>
+        <p class="qpa-approach-human__lede">Systematic process is powerful. It is not sufficient. A disciplined framework applied without judgment produces outcomes nobody actually wants. What follows is a clear statement of what quant can't do, and where human decision-making stays load-bearing.</p>
+      </div>
+      <div class="qpa-approach-human__limits">
+        <div class="qpa-approach-human__sublabel">WHAT QUANT CAN'T DO</div>
+        <div class="qpa-approach-human__limits-grid">
+          <div class="qpa-approach-human__limit">
+            <div class="qpa-approach-human__limit-header">
+              <div class="qpa-approach-human__limit-letter">A</div>
+              <div class="qpa-approach-human__limit-title">Recognize a regime change in real time</div>
+            </div>
+            <div class="qpa-approach-human__limit-body">Quant learns from data, and data is always behind the present. When the market is transitioning into a structurally new environment, historical signals become unreliable. That's the moment when experienced judgment is most valuable -- and least replaceable.</div>
+          </div>
+          <div class="qpa-approach-human__limit">
+            <div class="qpa-approach-human__limit-header">
+              <div class="qpa-approach-human__limit-letter">B</div>
+              <div class="qpa-approach-human__limit-title">Understand a specific client's life</div>
+            </div>
+            <div class="qpa-approach-human__limit-body">The model doesn't know that the client just sold a business, is caring for a parent, is three years from retirement, or has a child with specific needs. The advisor does. Every portfolio decision sits inside a personal context that no amount of data can capture.</div>
+          </div>
+          <div class="qpa-approach-human__limit">
+            <div class="qpa-approach-human__limit-header">
+              <div class="qpa-approach-human__limit-letter">C</div>
+              <div class="qpa-approach-human__limit-title">Ask the right question</div>
+            </div>
+            <div class="qpa-approach-human__limit-body">Models answer the questions they're built to answer. Framing the right question -- what are we actually trying to accomplish here, what does success look like -- is a human act that happens before any model runs.</div>
+          </div>
+          <div class="qpa-approach-human__limit">
+            <div class="qpa-approach-human__limit-header">
+              <div class="qpa-approach-human__limit-letter">D</div>
+              <div class="qpa-approach-human__limit-title">Know when to override</div>
+            </div>
+            <div class="qpa-approach-human__limit-body">Sometimes the model's recommendation is technically correct but practically wrong -- the right answer to a question we shouldn't be asking in this moment. Recognizing when to override a signal is a judgment call that quant can surface but cannot make.</div>
+          </div>
+        </div>
+      </div>
+      <div class="qpa-approach-human__committee">
+        <div class="qpa-approach-human__sublabel">WHERE HUMANS DECIDE</div>
+        <h3 class="qpa-approach-human__subheading">The investment committee.</h3>
+        <p class="qpa-approach-human__committee-lede">Three people. Three disciplines. One working body responsible for the decisions the quant framework supports. The committee is where methodology gets set, where exceptions get considered, and where strategic direction lives.</p>
+        <div class="qpa-approach-human__committee-grid">
+          <div class="qpa-approach-human__member">
+            <div class="qpa-approach-human__member-discipline">PORTFOLIO ARCHITECTURE</div>
+            <div class="qpa-approach-human__member-name">Ryan Carrington, CFA</div>
+            <div class="qpa-approach-human__member-role">Chief Investment Officer</div>
+          </div>
+          <div class="qpa-approach-human__member">
+            <div class="qpa-approach-human__member-discipline">QUANTITATIVE RESEARCH</div>
+            <div class="qpa-approach-human__member-name">Steve Cannon</div>
+            <div class="qpa-approach-human__member-role">Chief Quantitative Analyst</div>
+          </div>
+          <div class="qpa-approach-human__member">
+            <div class="qpa-approach-human__member-discipline">WEALTH INTEGRATION</div>
+            <div class="qpa-approach-human__member-name">John Carrington</div>
+            <div class="qpa-approach-human__member-role">Chief Wealth Officer</div>
+          </div>
+        </div>
+        <div class="qpa-approach-human__committee-link-wrap">
+          <a href="team.html" class="qpa-approach-human__committee-link">Meet the committee <span aria-hidden="true">&rarr;</span></a>
+        </div>
+      </div>
+      <div class="qpa-approach-human__close">
+        <div class="qpa-approach-human__sublabel">WHAT THIS MEANS FOR YOU</div>
+        <h3 class="qpa-approach-human__close-heading">You don't become less important. You become more specialized.</h3>
+        <p class="qpa-approach-human__close-paragraph">The practical result of working with QPA isn't that you matter less to your clients. It's that the part of the work only you can do -- knowing them, understanding their life, guiding their decisions, earning their trust over decades -- gets your full attention. The investment function runs in the background. You run the relationship.</p>
+        <p class="qpa-approach-human__close-paragraph">That's the division of labor the practice was supposed to have all along.</p>
       </div>
     </div>
   </section>
 
-  <!-- CTA BANNER -->
-  <section class="cta-banner">
-    <div class="container">
-      <h2>Ready to See What This Looks Like in Your Practice?</h2>
-      <p>A 30-minute conversation is all it takes to map out what's possible.</p>
-      <a href="contact.html" class="btn btn-light btn-arrow">Book a 30-Minute Conversation</a>
+  <!-- CTA -->
+  <section class="qpa-approach-cta">
+    <div class="qpa-approach-cta__glow" aria-hidden="true"></div>
+    <div class="qpa-approach-cta__inner">
+      <div class="qpa-approach-cta__eyebrow">THE NEXT STEP</div>
+      <h2 class="qpa-approach-cta__heading">If this way of thinking resonates,<br>let's keep talking.</h2>
+      <p class="qpa-approach-cta__lede">The reasoning on this page is general. The conversation worth having is specific -- about your practice, your clients, and whether QPA's approach fits the work you're actually trying to do.</p>
+      <p class="qpa-approach-cta__sublede">No pitch. No pressure. Just a working conversation about whether the fit makes sense.</p>
+      <div class="qpa-approach-cta__actions">
+        <a href="contact.html" class="qpa-approach-cta__button qpa-approach-cta__button--primary">Start a conversation</a>
+        <a href="what-we-do.html" class="qpa-approach-cta__button qpa-approach-cta__button--secondary">See the four services</a>
+      </div>
     </div>
   </section>
 
   <!-- FOOTER -->
-  <footer class="footer">
-    <div class="container">
-      <div class="footer-grid" style="grid-template-columns:1fr;">
-        <div class="footer-brand" style="text-align:center;max-width:600px;margin:0 auto;">
-          <a href="index.html" class="logo" style="justify-content:center;">
-            <img src="images/logo.svg" alt="Quant Portfolio Advisors">
+  <footer class="qpa-footer">
+    <div class="qpa-footer__inner">
+      <div class="qpa-footer__top">
+        <div class="qpa-footer__brand">
+          <a href="index.html" class="qpa-footer__logo" aria-label="Quant Portfolio Advisors home">
+            <img src="images/logo.svg" alt="Quant Portfolio Advisors" class="qpa-footer__logo-img">
           </a>
-          <p>You focus on your clients. We bring the quantitative rigor, disciplined portfolio construction, and institutional-grade asset management behind them.</p>
-          <div class="footer-social" style="justify-content:center;">
-            <a href="#" aria-label="LinkedIn"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a>
-          </div>
+          <p class="qpa-footer__tagline">The outsourced investment committee for independent wealth advisors.</p>
+          <p class="qpa-footer__dba">Quant Portfolio Advisors is a DBA of Elysium Wealth Management, LLC, an SEC-registered investment adviser.</p>
         </div>
-      </div>
-      <div class="footer-bottom" style="justify-content:center;text-align:center;">
-        <div>
-          <p>&copy; 2026 Quant Portfolio Advisors. All rights reserved.</p>
-          <div class="footer-legal" style="justify-content:center;margin-top:12px;">
+        <div class="qpa-footer__column">
+          <div class="qpa-footer__column-title">EXPLORE</div>
+          <nav class="qpa-footer__links" aria-label="Explore">
+            <a href="what-we-do.html">What We Do</a>
+            <a href="strategies.html">Strategies</a>
+            <a href="our-approach.html">Our Approach</a>
+            <a href="team.html">Team</a>
+          </nav>
+        </div>
+        <div class="qpa-footer__column">
+          <div class="qpa-footer__column-title">CONNECT</div>
+          <nav class="qpa-footer__links" aria-label="Connect">
+            <a href="contact.html">Start a conversation</a>
+            <a href="mailto:contact@qpa.com">contact@qpa.com</a>
+            <a href="https://linkedin.com" target="_blank" rel="noopener" aria-label="LinkedIn"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="vertical-align:middle;"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a>
+          </nav>
+        </div>
+        <div class="qpa-footer__column">
+          <div class="qpa-footer__column-title">DISCLOSURES</div>
+          <nav class="qpa-footer__links" aria-label="Disclosures">
+            <a href="documents/form-crs.pdf">Form CRS</a>
+            <a href="documents/form-adv-part2a.pdf">Form ADV Part 2A</a>
+            <a href="documents/privacy-policy.pdf">Privacy</a>
             <a href="disclosures.html">Disclosures</a>
-            <a href="documents/form-crs.pdf" target="_blank">Form CRS</a>
-            <a href="documents/form-adv-part2a.pdf" target="_blank">Form ADV Part 2A</a>
-          </div>
+          </nav>
         </div>
       </div>
-      <div class="footer-disclosure" style="text-align:center;">
-        Investment advisory services offered through Elysium Wealth Management, an SEC-registered investment adviser, dba Quant Portfolio Advisors. Past performance is not indicative of future results. Investment advisory services involve risk, including possible loss of principal.
+      <div class="qpa-footer__bottom">
+        <p class="qpa-footer__legal">Investment advisory services offered through Elysium Wealth Management, LLC, an SEC-registered investment adviser, doing business as Quant Portfolio Advisors. Registration does not imply a certain level of skill or training. Past performance is not indicative of future results. Investment advisory services involve risk, including possible loss of principal. QPA works with independent financial advisors. Individual investors, please contact a QPA-affiliated advisor.</p>
+        <div class="qpa-footer__copyright">&copy; 2026 Quant Portfolio Advisors</div>
       </div>
-      <p style="text-align:center;font-size:0.75rem;color:rgba(255,255,255,0.4);margin-top:16px;">QPA works through independent advisors. Individual investors, please work with a QPA-affiliated advisor.</p>
     </div>
   </footer>
 
