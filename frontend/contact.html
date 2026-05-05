@@ -116,7 +116,7 @@
           <div class="qpa-contact-form-section__email-note">Direct email reaches the same inbox as the form. Either works.</div>
         </div>
       </div>
-      <form class="qpa-contact-form" id="contact-form" method="post" action="/contact/submit" novalidate>
+      <form class="qpa-contact-form" id="qpa-contact-form">
         <div class="qpa-contact-form__row">
           <div class="qpa-contact-form__field">
             <label for="contact-first-name" class="qpa-contact-form__label">FIRST NAME</label>
@@ -137,6 +137,7 @@
         </div>
         <div class="qpa-contact-form__field">
           <div class="qpa-contact-form__label">WHAT'S PROMPTING THIS?</div>
+          <input type="hidden" name="prompting" id="prompting-value" value="exploring">
           <div class="qpa-contact-form__reasons">
             <label class="qpa-contact-form__reason"><input type="radio" name="reason" value="exploring" checked><span>Exploring a fit generally</span></label>
             <label class="qpa-contact-form__reason"><input type="radio" name="reason" value="mandate"><span>Specific client or mandate</span></label>
@@ -152,12 +153,81 @@
           <label for="contact-website">Website (leave this empty)</label>
           <input type="text" id="contact-website" name="website" tabindex="-1" autocomplete="off">
         </div>
-        <div class="qpa-contact-form__turnstile">
-          <div class="cf-turnstile" data-sitekey="YOUR_TURNSTILE_SITE_KEY" data-theme="light"></div>
-        </div>
         <button type="submit" class="qpa-contact-form__submit">Send</button>
         <div class="qpa-contact-form__disclaimer">By sending this form, you consent to QPA contacting you about the topic you've indicated. We don't add form submissions to marketing lists.</div>
       </form>
+
+      <script>
+      const WEB3FORMS_KEY = '6df46e24-9125-4240-afbb-127af5eb33a0';
+      const APPS_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbwRUHZgnUlLNMyW0C8SCrsYWq5d3ft4D6vRr2FM7yk8w-k5lA16gRUiE8fSMuvkocBn/exec';
+
+      // Sync radio buttons to hidden prompting field
+      document.querySelectorAll('input[name="reason"]').forEach(function(radio) {
+        radio.addEventListener('change', function() {
+          document.getElementById('prompting-value').value = this.value;
+        });
+      });
+
+      document.getElementById('qpa-contact-form').addEventListener('submit', async function(e) {
+        e.preventDefault();
+        const form = e.target;
+        const formData = new FormData(form);
+
+        // Honeypot check — silent reject
+        if (formData.get('website') && formData.get('website').length > 0) {
+          window.location.href = '/thank-you.html';
+          return;
+        }
+
+        const firstName = formData.get('first_name');
+        const lastName = formData.get('last_name');
+
+        const payload = {
+          first_name: firstName,
+          last_name: lastName,
+          firm: formData.get('firm'),
+          email: formData.get('email'),
+          prompting: formData.get('prompting'),
+          context: formData.get('context')
+        };
+
+        const button = form.querySelector('button[type="submit"]');
+        const originalButtonText = button.textContent;
+        button.disabled = true;
+        button.textContent = 'Sending...';
+
+        try {
+          const web3formsPayload = {
+            access_key: WEB3FORMS_KEY,
+            subject: `New QPA inquiry from ${firstName} ${lastName}`,
+            from_name: 'QPA Website',
+            ...payload,
+            autoresponse_subject: 'We received your message',
+            autoresponse_message: `Hi ${firstName},\n\nThanks for reaching out to Quant Portfolio Advisors. We have received your inquiry and we'll be in touch within one business day.\n\nBest,\nTamara Cannon\nQuant Portfolio Advisors`
+          };
+
+          await Promise.all([
+            fetch('https://api.web3forms.com/submit', {
+              method: 'POST',
+              headers: {'Content-Type': 'application/json'},
+              body: JSON.stringify(web3formsPayload)
+            }),
+            fetch(APPS_SCRIPT_URL, {
+              method: 'POST',
+              mode: 'no-cors',
+              headers: {'Content-Type': 'application/json'},
+              body: JSON.stringify(payload)
+            })
+          ]);
+
+          window.location.href = '/thank-you.html';
+        } catch (error) {
+          button.disabled = false;
+          button.textContent = originalButtonText;
+          alert('Something went wrong. Please try again or email tamara@quantpa.com directly.');
+        }
+      });
+      </script>
     </div>
   </section>
 
@@ -273,7 +343,6 @@
     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 15l-6-6-6 6"/></svg>
   </button>
 
-  <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
   <script src="js/main.js"></script>
 </body>
 </html>
