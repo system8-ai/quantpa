@@ -119,13 +119,17 @@
       <form class="qpa-contact-form" id="contact-form" method="post" action="/contact/submit" novalidate>
         <div class="qpa-contact-form__row">
           <div class="qpa-contact-form__field">
-            <label for="contact-name" class="qpa-contact-form__label">NAME</label>
-            <input type="text" id="contact-name" name="name" class="qpa-contact-form__input" placeholder="Your full name" required>
+            <label for="contact-first-name" class="qpa-contact-form__label">FIRST NAME</label>
+            <input type="text" id="contact-first-name" name="first_name" class="qpa-contact-form__input" placeholder="First name" required>
           </div>
           <div class="qpa-contact-form__field">
-            <label for="contact-firm" class="qpa-contact-form__label">FIRM</label>
-            <input type="text" id="contact-firm" name="firm" class="qpa-contact-form__input" placeholder="Your advisory firm" required>
+            <label for="contact-last-name" class="qpa-contact-form__label">LAST NAME</label>
+            <input type="text" id="contact-last-name" name="last_name" class="qpa-contact-form__input" placeholder="Last name" required>
           </div>
+        </div>
+        <div class="qpa-contact-form__field">
+          <label for="contact-firm" class="qpa-contact-form__label">FIRM</label>
+          <input type="text" id="contact-firm" name="firm" class="qpa-contact-form__input" placeholder="Your advisory firm" required>
         </div>
         <div class="qpa-contact-form__field">
           <label for="contact-email" class="qpa-contact-form__label">EMAIL</label>
