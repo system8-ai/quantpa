@@ -158,7 +158,6 @@
       </form>
 
       <script>
-      const WEB3FORMS_KEY = '6df46e24-9125-4240-afbb-127af5eb33a0';
       const APPS_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbwRUHZgnUlLNMyW0C8SCrsYWq5d3ft4D6vRr2FM7yk8w-k5lA16gRUiE8fSMuvkocBn/exec';
 
       // Sync radio buttons to hidden prompting field
@@ -173,52 +172,33 @@
         const form = e.target;
         const formData = new FormData(form);
 
-        // Honeypot check — silent reject
+        // Honeypot check - silent reject
         if (formData.get('website') && formData.get('website').length > 0) {
           window.location.href = '/thank-you.html';
           return;
         }
-
-        const firstName = formData.get('first_name');
-        const lastName = formData.get('last_name');
-
-        const payload = {
-          first_name: firstName,
-          last_name: lastName,
-          firm: formData.get('firm'),
-          email: formData.get('email'),
-          prompting: formData.get('prompting'),
-          context: formData.get('context')
-        };
 
         const button = form.querySelector('button[type="submit"]');
         const originalButtonText = button.textContent;
         button.disabled = true;
         button.textContent = 'Sending...';
 
-        try {
-          const web3formsPayload = {
-            access_key: WEB3FORMS_KEY,
-            subject: `New QPA inquiry from ${firstName} ${lastName}`,
-            from_name: 'QPA Website',
-            ...payload,
-            autoresponse_subject: 'We received your message',
-            autoresponse_message: `Hi ${firstName},\n\nThanks for reaching out to Quant Portfolio Advisors. We have received your inquiry and we'll be in touch within one business day.\n\nBest,\nTamara Cannon\nQuant Portfolio Advisors`
-          };
+        // Build URL-encoded form data (more reliable with Apps Script than JSON)
+        const params = new URLSearchParams();
+        params.append('first_name', formData.get('first_name') || '');
+        params.append('last_name', formData.get('last_name') || '');
+        params.append('firm', formData.get('firm') || '');
+        params.append('email', formData.get('email') || '');
+        params.append('prompting', formData.get('prompting') || '');
+        params.append('context', formData.get('context') || '');
 
-          await Promise.all([
-            fetch('https://api.web3forms.com/submit', {
-              method: 'POST',
-              headers: {'Content-Type': 'application/json'},
-              body: JSON.stringify(web3formsPayload)
-            }),
-            fetch(APPS_SCRIPT_URL, {
-              method: 'POST',
-              mode: 'no-cors',
-              headers: {'Content-Type': 'application/json'},
-              body: JSON.stringify(payload)
-            })
-          ]);
+        try {
+          await fetch(APPS_SCRIPT_URL, {
+            method: 'POST',
+            mode: 'no-cors',
+            headers: {'Content-Type': 'application/x-www-form-urlencoded'},
+            body: params.toString()
+          });
 
           window.location.href = '/thank-you.html';
         } catch (error) {
