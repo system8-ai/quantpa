@@ -1,2 +1,2 @@
-All code in this repository is owned by System8.ai, LLC and may not
+All code and other content in this repository is owned by System8.ai, LLC and may not
 be used, copied, or used to build derived works without express written consent.
